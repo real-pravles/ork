@@ -21,11 +21,22 @@
 
 package com.pravles.ork;
 
+import org.jgrapht.Graph;
+import org.jgrapht.graph.DefaultEdge;
+
+import java.io.File;
 import java.util.Map;
 
 public class ExportGraphToGraphviz implements com.pravles.processengine.api.ActivityFunction {
     @Override
     public Map<String, Object> apply(Map<String, Object> ctx) {
+        final Graph<String, DefaultEdge> graph = (Graph<String, DefaultEdge>) ctx.get("graph");
+        final Map<String, Map<String, Object>> notes = (Map<String, Map<String, Object>>) ctx.get("notes");
+        final String mainZkPath = (String) ctx.get("main-zk-path");
+
+        // TODO: Determine file name
+        final File mainZkFile = new File(mainZkPath);
+
         return ctx;
     }
 }
