@@ -68,7 +68,7 @@ public class CreateGraph implements com.pravles.processengine.api.ActivityFuncti
                     graph.addEdge(id, linkedNoteId);
                 }
             }
-            final List<String> trainOfThought = (List<String>) notes.get("train-of-thought");
+            final List<String> trainOfThought = (List<String>) note.get("train-of-thought");
             if (trainOfThought.size() > 1) {
                 int i = 1;
 
