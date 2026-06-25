@@ -21,18 +21,34 @@
 
 package com.pravles.ork;
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FileUtils;
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.Map;
 
+@Slf4j
 public class ExportGraphToGraphviz implements com.pravles.processengine.api.ActivityFunction {
+
+    public static final String NL = System.lineSeparator();
+
     @Override
     public Map<String, Object> apply(Map<String, Object> ctx) {
         final Graph<String, DefaultEdge> graph = (Graph<String, DefaultEdge>) ctx.get("graph");
         final Map<String, Map<String, Object>> notes = (Map<String, Map<String, Object>>) ctx.get("notes");
         final String mainZkPath = (String) ctx.get("main-zk-path");
+
+        final StringBuilder sb = new StringBuilder();
+        sb.append("graph G {");
+        sb.append(NL);
+        sb.append("}");
+        sb.append(NL);
+
+
 
         // TODO: Determine file name
         final File mainZkFile = new File(mainZkPath);
@@ -41,6 +57,13 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
 
         final File dotFile = new File(String.format("%s/%s.dot",
                 parent.getAbsolutePath(), mainZkName));
+
+        try {
+            FileUtils.writeStringToFile(dotFile, sb.toString(), Charset.forName("UTF-8"));
+        } catch (final IOException e) {
+            log.error(String.format("An error occurred while trying to write to file '%s'",
+                    dotFile.getAbsolutePath()), e);
+        }
 
         return ctx;
     }
