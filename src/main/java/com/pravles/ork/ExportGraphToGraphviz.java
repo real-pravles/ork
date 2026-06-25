@@ -23,6 +23,8 @@ package com.pravles.ork;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.WordUtils;
 import org.jgrapht.Graph;
 
 import java.io.File;
@@ -43,6 +45,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
     private static final double MIN_SIZE = 0.3;
     private static final double MAX_SIZE = 2;
     public static final String NL = System.lineSeparator();
+    public static final int TITLE_WIDTH = 50;
 
     @Override
     public Map<String, Object> apply(Map<String, Object> ctx) {
@@ -106,6 +109,17 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
                 MIN_SIZE +
                         (MAX_SIZE - MIN_SIZE)
                                 * Math.sqrt((double) degree / maxDegree);
+
+        final Map<String, Object> note = notes.get(nodeId);
+        final String title = (String) note.get("title");
+
+
+        final StringBuilder sb = new StringBuilder();
+        sb.append("<b>");
+        sb.append(nodeId);
+        sb.append("</b>");
+        sb.append("<br/>");
+        sb.append(WordUtils.wrap(title, TITLE_WIDTH, "<br/>", true));
 
         return format("  \"%s\" [label=\"%s\", shape=ellipse, width=%.2f, height=%.2f]%s",
                 nodeId, nodeId, 1.5*size, 1.0*size, NL);
