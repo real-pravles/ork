@@ -86,6 +86,7 @@ public class CreateGraph implements com.pravles.processengine.api.ActivityFuncti
         }
 
         ctx.put("graph", graph);
+        ctx.put("notes", notes);
 
         return ctx;
     }
