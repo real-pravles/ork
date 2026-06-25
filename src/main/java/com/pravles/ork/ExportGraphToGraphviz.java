@@ -29,10 +29,16 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import static java.lang.String.format;
+import static java.util.Arrays.asList;
+import static java.util.Collections.sort;
+import static java.util.stream.Collectors.joining;
 
 @Slf4j
 public class ExportGraphToGraphviz implements com.pravles.processengine.api.ActivityFunction {
@@ -50,27 +56,27 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         sb.append(NL);
 
         final List<String> nodeIds = new ArrayList<>(notes.keySet());
-        Collections.sort(nodeIds);
+        sort(nodeIds);
+
+        sb.append(asList("graph", "node", "edge")
+                        .stream()
+                        .map(type ->
+                                format("%s [fontname=\"Courier Prime\"]",
+                                        type))
+                        .collect(joining(NL)));
 
         sb.append(
                 nodeIds.stream()
                         .map(nodeId -> renderNode(nodeId, notes))
-                        .collect(Collectors.joining())
-
-        );
+                        .collect(joining()));
 
         sb.append(
                 graph.edgeSet().stream()
                         .map(edge -> renderEdge(edge))
-
-                        .collect(Collectors.joining())
-
-        );
+                        .collect(joining()));
 
         sb.append("}");
         sb.append(NL);
-
-
 
         writeToFile(mainZkPath, sb);
 
@@ -78,14 +84,15 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
     }
 
     private String renderEdge(final OrkEdge edge) {
-        return String.format("  \"%s\" -- \"%s\"%s",
+        return format("  \"%s\" -- \"%s\"%s",
                 edge.getSource(),
                 edge.getTarget(),
                 NL);
     }
 
-    private String renderNode(final String nodeId, final Map<String, Map<String, Object>> notes) {
-        return String.format("  \"%s\" [label=\"%s\"]%s",
+    private String renderNode(final String nodeId,
+                              final Map<String, Map<String, Object>> notes) {
+        return format("  \"%s\" [label=\"%s\"]%s",
                 nodeId, nodeId, NL);
     }
 
@@ -95,7 +102,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         try {
             FileUtils.writeStringToFile(dotFile, sb.toString(), Charset.forName("UTF-8"));
         } catch (final IOException e) {
-            log.error(String.format("An error occurred while trying to write to file '%s'",
+            log.error(format("An error occurred while trying to write to file '%s'",
                     dotFile.getAbsolutePath()), e);
         }
     }
@@ -105,7 +112,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         final File parent = mainZkFile.getParentFile();
         final String mainZkName = mainZkFile.getName();
 
-        final File dotFile = new File(String.format("%s/%s.dot",
+        final File dotFile = new File(format("%s/%s.dot",
                 parent.getAbsolutePath(), mainZkName));
         return dotFile;
     }
