@@ -24,14 +24,14 @@ package com.pravles;
 import com.pravles.processengine.util.ProcessDefinition;
 import com.pravles.processengine.util.ProcessEngineLauncher;
 
-public class ProcessDrivenApp {
+public class OrkApp {
     public static void main(final String[] args) {
-        final ProcessDrivenApp app = new ProcessDrivenApp();
+        final OrkApp app = new OrkApp();
         app.run(args);
     }
 
     void run(final String[] args) {
-        final ProcessDefinition lif = new ProdProcessDefinition();
+        final ProcessDefinition lif = new MainOrkProcessDefinition();
         new ProcessEngineLauncher().run(lif);
     }
 

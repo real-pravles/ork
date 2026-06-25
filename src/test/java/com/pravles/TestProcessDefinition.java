@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 @RequiredArgsConstructor
-public class TestProcessDefinition extends ProdProcessDefinition {
+public class TestProcessDefinition extends MainOrkProcessDefinition {
 
     public static final String HELLO_WORLD = "hello-world";
     public static final String EXECUTED_ACTIVITIES = "executedActivities";

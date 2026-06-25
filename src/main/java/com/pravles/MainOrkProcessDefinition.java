@@ -27,6 +27,7 @@ import com.pravles.processengine.util.AbstractProcessDefinition;
 import com.pravles.processengine.util.PpmnDiagramInfo;
 import com.pravles.util.ClojureActivityFunction;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,11 +35,14 @@ import java.util.Map;
 import static com.pravles.processengine.util.PpmnDiagramInfo.ROOT;
 import static java.util.Arrays.asList;
 
-public class ProdProcessDefinition extends AbstractProcessDefinition {
+public class MainOrkProcessDefinition extends AbstractProcessDefinition {
     @Override
     protected void initFnBindings(final Map<String, ActivityFunction> fnBindings) {
-        fnBindings.put("привет-мир",
-                new ClojureActivityFunction("hello-world"));
+        asList("", "")
+                        .stream()
+                                .forEach(f ->
+                                        fnBindings.put(f,
+                                                new ClojureActivityFunction(f)));
     }
 
     @Override

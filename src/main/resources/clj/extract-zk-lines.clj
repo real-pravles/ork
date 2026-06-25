@@ -19,7 +19,7 @@
 ; CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ;
 
-(ns hello-world)
+(ns extract-zk-lines)
 
 (require '[clojure.string :as str]
          '[clojure.java.io :as io]
@@ -29,7 +29,8 @@
 
 (def nl (System/getProperty "line.separator"))
 
+
 (defn гав
   [old-ctx]
-  (println "Привет из прекрасного мира Кложура!")
+  (println "extract-zk-lines")
   old-ctx)
