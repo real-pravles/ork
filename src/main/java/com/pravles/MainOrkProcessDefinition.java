@@ -38,7 +38,8 @@ import static java.util.Arrays.asList;
 public class MainOrkProcessDefinition extends AbstractProcessDefinition {
     @Override
     protected void initFnBindings(final Map<String, ActivityFunction> fnBindings) {
-        asList("", "")
+        asList("hello-world",
+                "extract-zk-lines")
                         .stream()
                                 .forEach(f ->
                                         fnBindings.put(f,
