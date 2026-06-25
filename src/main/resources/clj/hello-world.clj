@@ -30,6 +30,6 @@
 (def nl (System/getProperty "line.separator"))
 
 (defn гав
-  [old-ctx]
+  [ctx]
   (println "Привет из прекрасного мира Кложура!")
-  old-ctx)
+  ctx)

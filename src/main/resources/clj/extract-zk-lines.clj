@@ -38,8 +38,8 @@
 
 
 (defn гав
-  [old-ctx]
-  (let [main-zk-path (get ctxt "main-zk-path")]
+  [ctx]
+  (let [main-zk-path (get ctx "main-zk-path")]
     (println "extract-zk-lines")
     (println "main-zk-path: " main-zk-path)
-    old-ctx))
+    ctx))
