@@ -26,6 +26,8 @@ import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.DirectedAcyclicGraph;
 import org.jgrapht.graph.Pseudograph;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -48,6 +50,13 @@ public class CreateGraph implements com.pravles.processengine.api.ActivityFuncti
 
         final Graph<String, DefaultEdge> graph =
                 new Pseudograph<>(DefaultEdge.class);
+
+        final List<String> noteIds = new ArrayList<>(notes.keySet());
+        Collections.sort(noteIds);
+
+        for (final String id : noteIds) {
+
+        }
 
         ctx.put("graph", graph);
 
