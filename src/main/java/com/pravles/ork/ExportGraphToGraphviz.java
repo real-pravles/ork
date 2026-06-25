@@ -71,7 +71,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
     }
 
     private String renderNode(final String nodeId, final Map<String, Map<String, Object>> notes) {
-        return String.format("\"%s\" [label=\"%s\"]%s",
+        return String.format("  \"%s\" [label=\"%s\"]%s",
                 nodeId, nodeId, NL);
     }
 
