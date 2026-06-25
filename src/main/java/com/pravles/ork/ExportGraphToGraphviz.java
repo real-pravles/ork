@@ -51,12 +51,13 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
 
 
         // TODO: Determine file name
-        final File mainZkFile = new File(mainZkPath);
-        final File parent = mainZkFile.getParentFile();
-        final String mainZkName = mainZkFile.getName();
+        writeToFile(mainZkPath, sb);
 
-        final File dotFile = new File(String.format("%s/%s.dot",
-                parent.getAbsolutePath(), mainZkName));
+        return ctx;
+    }
+
+    private static void writeToFile(String mainZkPath, StringBuilder sb) {
+        final File dotFile = composeDotFileName(mainZkPath);
 
         try {
             FileUtils.writeStringToFile(dotFile, sb.toString(), Charset.forName("UTF-8"));
@@ -64,7 +65,15 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
             log.error(String.format("An error occurred while trying to write to file '%s'",
                     dotFile.getAbsolutePath()), e);
         }
+    }
 
-        return ctx;
+    private static File composeDotFileName(String mainZkPath) {
+        final File mainZkFile = new File(mainZkPath);
+        final File parent = mainZkFile.getParentFile();
+        final String mainZkName = mainZkFile.getName();
+
+        final File dotFile = new File(String.format("%s/%s.dot",
+                parent.getAbsolutePath(), mainZkName));
+        return dotFile;
     }
 }
