@@ -39,6 +39,9 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         final File parent = mainZkFile.getParentFile();
         final String mainZkName = mainZkFile.getName();
 
+        final File dotFile = new File(String.format("%s/%s.dot",
+                parent.getAbsolutePath(), mainZkName));
+
         return ctx;
     }
 }
