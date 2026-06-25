@@ -100,7 +100,7 @@ Related notes:
                                 "timestamp", "2026-06-13 10:49",
                                 "linked-notes", Arrays.asList("4", "5",
                                         "11", "9", "14", "15", "22"),
-                                "train-of-thought", Collections.emptyList()
+                                "train-of-thought", Collections.singletonList("3")
                         )
                 ),
                 Arguments.of(
