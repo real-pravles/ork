@@ -45,7 +45,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
     private static final double MIN_SIZE = 0.3;
     private static final double MAX_SIZE = 2;
     public static final String NL = System.lineSeparator();
-    public static final int TITLE_WIDTH = 50;
+    public static final int TITLE_WIDTH = 30;
 
     @Override
     public Map<String, Object> apply(Map<String, Object> ctx) {
