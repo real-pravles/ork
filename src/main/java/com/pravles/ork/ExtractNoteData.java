@@ -58,16 +58,20 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
         final List<String> result = new ArrayList<>();
 
         String current = id;
+        boolean dotFound = false;
 
-        while (!current.isEmpty()) {
+        while (!current.isEmpty() && !dotFound) {
             result.add(current);
 
             current = current.substring(0, current.length() - 1);
 
             if (current.endsWith(".")) {
-                current = current.substring(0, current.length() - 1);
+                result.add(current.substring(0, current.length() - 1));
+                dotFound = true;
             }
         }
+
+        Collections.sort(result);
 
         return result;
     }
