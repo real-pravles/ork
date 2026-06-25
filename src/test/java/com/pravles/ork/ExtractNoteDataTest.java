@@ -163,7 +163,27 @@ See [[n80.1a][80.1a]]
                                 "linked-notes", Collections.emptySet(),
                                 "train-of-thought", Arrays.asList("74", "74.1", "74.1a", "74.1a2")
                         )
+                ),
+                Arguments.of(
+                        """
+** 44 (2026-06-13 12:48)
+<<n44>>
+
+Re [[n40][40]]: Forced installation of NeuraLink devices with the Max messenger running on them can be called *Maximization*.
+
+See
+
+ * [[n72.a][72.a]]: Ibanium
+                        """,
+                        Map.of(
+                                "id", "44",
+                                "title", "",
+                                "timestamp", "2026-06-13 12:48",
+                                "linked-notes", new HashSet<String>(Arrays.asList("40", "72.a")),
+                                "train-of-thought", Arrays.asList("44")
+                        )
                 )
-                );
+
+        );
     }
 }
