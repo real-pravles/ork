@@ -160,7 +160,7 @@ See [[n80.1a][80.1a]]
                                 "id", "74.1a2",
                                 "title", "The fiancée left the Roskompozor guy",
                                 "timestamp", "2026-06-16 11:58",
-                                "linked-notes", Collections.emptyList(),
+                                "linked-notes", Collections.emptySet(),
                                 "train-of-thought", Arrays.asList("74", "74.1", "74.1a", "74.1a2")
                         )
                 )
