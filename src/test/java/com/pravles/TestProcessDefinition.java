@@ -38,6 +38,7 @@ public class TestProcessDefinition extends MainOrkProcessDefinition {
 
     @Override
     protected void initFnBindings(Map<String, ActivityFunction> fnBindings) {
+        super.initFnBindings(fnBindings);
         fnBindings.put("привет-мир",
                 new TestActivity(HELLO_WORLD));
     }
