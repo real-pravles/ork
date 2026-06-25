@@ -28,13 +28,14 @@ import lombok.RequiredArgsConstructor;
 import java.util.ArrayList;
 import java.util.Map;
 
-@RequiredArgsConstructor
 public class TestProcessDefinition extends MainOrkProcessDefinition {
 
     public static final String HELLO_WORLD = "hello-world";
     public static final String EXECUTED_ACTIVITIES = "executedActivities";
 
-    private final String path;
+    public TestProcessDefinition(final String mainZkPath) {
+        super(mainZkPath);
+    }
 
     @Override
     protected void initFnBindings(Map<String, ActivityFunction> fnBindings) {

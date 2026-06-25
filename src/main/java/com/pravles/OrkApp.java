@@ -31,7 +31,7 @@ public class OrkApp {
     }
 
     void run(final String[] args) {
-        final ProcessDefinition lif = new MainOrkProcessDefinition();
+        final ProcessDefinition lif = new MainOrkProcessDefinition(null);
         new ProcessEngineLauncher().run(lif);
     }
 

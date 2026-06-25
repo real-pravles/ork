@@ -26,6 +26,7 @@ import com.pravles.processengine.api.ConditionFunction;
 import com.pravles.processengine.util.AbstractProcessDefinition;
 import com.pravles.processengine.util.PpmnDiagramInfo;
 import com.pravles.util.ClojureActivityFunction;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -35,7 +36,10 @@ import java.util.Map;
 import static com.pravles.processengine.util.PpmnDiagramInfo.ROOT;
 import static java.util.Arrays.asList;
 
+@RequiredArgsConstructor
 public class MainOrkProcessDefinition extends AbstractProcessDefinition {
+    private final String mainZkPath;
+
     @Override
     protected void initFnBindings(final Map<String, ActivityFunction> fnBindings) {
         asList("hello-world",
@@ -53,7 +57,9 @@ public class MainOrkProcessDefinition extends AbstractProcessDefinition {
 
     @Override
     protected Map<String, Object> composeInitialContext() {
-        return new HashMap<>();
+        final HashMap<String, Object> ctx = new HashMap<>();
+        ctx.put("main-zk-path", mainZkPath);
+        return ctx;
     }
 
     @Override
