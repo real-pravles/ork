@@ -21,23 +21,5 @@
 
 package com.pravles.ork;
 
-import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.graph.DirectedAcyclicGraph;
-import org.jgrapht.graph.Pseudograph;
-
-import java.util.Map;
-
-public class CreateGraph implements com.pravles.processengine.api.ActivityFunction {
-    @Override
-    public Map<String, Object> apply(Map<String, Object> ctx) {
-
-
-        final Graph<String, DefaultEdge> graph =
-                new Pseudograph<>(DefaultEdge.class);
-
-        ctx.put("graph", graph);
-
-        return ctx;
-    }
+public class ZkGraphEdge {
 }
