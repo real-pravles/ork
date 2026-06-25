@@ -58,7 +58,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         sb.append(asList("graph", "node", "edge")
                         .stream()
                         .map(type ->
-                                format("%s [fontname=\"Courier Prime\"]",
+                                format("  %s [fontname=\"Courier Prime\"]",
                                         type))
                         .collect(joining(NL)));
         sb.append(NL);
