@@ -55,8 +55,6 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         sb.append("graph G {");
         sb.append(NL);
 
-        final List<String> nodeIds = new ArrayList<>(notes.keySet());
-        sort(nodeIds);
 
         sb.append(asList("graph", "node", "edge")
                         .stream()
@@ -64,7 +62,12 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
                                 format("%s [fontname=\"Courier Prime\"]",
                                         type))
                         .collect(joining(NL)));
+        sb.append(NL);
+        sb.append("  overlap=false");
+        sb.append(NL);
 
+        final List<String> nodeIds = new ArrayList<>(notes.keySet());
+        sort(nodeIds);
         sb.append(
                 nodeIds.stream()
                         .map(nodeId -> renderNode(nodeId, notes))
