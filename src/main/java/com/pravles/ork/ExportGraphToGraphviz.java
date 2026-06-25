@@ -123,7 +123,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
             sb.append(WordUtils.wrap(title, TITLE_WIDTH, "<br/>", true));
         }
 
-        return format("  \"%s\" [label=\"%s\", shape=ellipse, width=%.2f, height=%.2f]%s",
+        return format("  \"%s\" [label=<%s>, shape=ellipse, width=%.2f, height=%.2f]%s",
                 nodeId, sb.toString(), 1.5*size, 1.0*size, NL);
     }
 
