@@ -23,14 +23,18 @@ package com.pravles;
 
 import com.pravles.processengine.TestActivity;
 import com.pravles.processengine.api.ActivityFunction;
+import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.Map;
 
+@RequiredArgsConstructor
 public class TestProcessDefinition extends ProdProcessDefinition {
 
     public static final String HELLO_WORLD = "hello-world";
     public static final String EXECUTED_ACTIVITIES = "executedActivities";
+
+    private final String path;
 
     @Override
     protected void initFnBindings(Map<String, ActivityFunction> fnBindings) {
