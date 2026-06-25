@@ -1,0 +1,1410 @@
+#+STARTUP: logdone
+#+TITLE: The Waitress (short story)
+
+* Table of contents
+
+ * [[n][Next step]]
+ * [[zk][Mini-Zettelkasten]]
+ * [[m][Memory]]
+   * [[m-cc][Completion Criteria]]
+   * [[m-i][Ideas]]
+ * [[p][Protocol]]
+
+* Memory
+<<m>>
+
+ * Protocol file for TODOS: ~/Users/dp118m/dev/misc/intranet/protocols/w300-0011.org~
+ * Idea for a title: "The Waitress and the Demogorgon" ("Demogorgon" being the state/elites)
+ * [[19A25F6D-BF0B-47E9-9E2F-CA41460D2EDD][Place]] we were working on before trying out the Zettelkasten.
+
+ 
+** Completion Criteria
+<<m-cc>>
+
+[0%] The work on "The Waitress" short story is completed
+ - [ ] [[m-bsp][Big Structural problems]] are fixed
+   - [ ] [[m-bsp1][Church switch]]
+   - [ ] [[m-bsp2][PTSD switch]]
+   - [ ] [[m-bsp3][The ask-her-out question dies without resolution]]
+ - [ ] The SubStack profile is [[m-pu][updated]]
+ - [ ] The text of the story is self-edited
+ - [ ] The text of the story is proof-read by Claude
+
+** Big Structural Problems   
+<<m-bsp>>
+
+*** Church switch
+<<m-bsp1>>
+
+1. The Jesus/Sanhedrin pivot is the single biggest risk.
+
+The transition happens here: "I look outside. The churches. Both of them. Wouldn't mind them, if their operators hadn't perverted Christianity."
+
+Up to this point, the reader has been with a slightly cranky, slightly lonely man having recognizable thoughts about a waitress — boobs, age, kids, piercings. These are coarse but legible thoughts. Then, in the space of about two paragraphs, you launch into a full historical-political theory about ancient Israel, Rome, AIPAC, Russian oligarchs, and Epstein islands. There is no bridge. The narrator looks out a window and the reader is suddenly reading a political pamphlet.
+
+This is the place a SubStack reader is most likely to close the tab. Not because the content is offensive — they signed up for weird — but because the narrator they were reading seems to have been replaced by a different narrator. It reads less like a drunk man's monologue (which has its own drift-logic) and more like two different documents stapled together.
+
+The fix doesn't have to be much. Even one sentence of internal motion — something like the narrator catching himself, noticing he's doing it again, half-apologizing to the reader — would re-anchor the voice. Right now the churches are just there in the window, and then suddenly they unlock a thousand-word essay.
+
+*** PTSD switch
+<<m-bsp2>>
+
+2. The "PTSD / experiment" line is dropped and never recovered.
+
+Early on you write: "What will happen to my PTSD, if I spent a year or two in near-paradisic circumstances?"
+
+This is a terrific hook. It promises the reader a specific frame: a damaged man running an experiment on himself. But the story never returns to it explicitly. By the end, when the narrator is planning arson, the reader has no easy way to connect "the experiment failed" or "the experiment worked but produced this" or "the PTSD is what's actually talking now." The line just sits there unredeemed.
+
+This matters structurally because the PTSD line is the element that could make the arson ending feel inevitable in retrospect rather than tacked on. Right now you're not cashing in the chip you set up.
+
+*** The ask-her-out question dies without resolution
+<<m-bsp3>>
+
+3. The ask-her-out question dies without resolution.
+
+The narrator spends real estate on "should I ask her out?" — debating her age, her piercing, her fertility. Then the question is simply abandoned. He decides to commit arson and walks out. The romantic question doesn't get a no; it gets forgotten.
+
+For your stated arc to work — reader expects romance question to resolve, gets arson instead — the romance question needs to be answered by the arson decision, not just displaced by it. Right now it feels less like "he chose arson over her" and more like "the writer changed subjects." There's one line near the end that gestures at this ("You lose the chance to date this woman. You gain the chance to prevent the extermination of millions...") but it arrives after the reader has already been doing political theory for a while, so it lands as an afterthought rather than as the resolution of the original tension.
+
+** Ideas
+<<m-i>>
+
+ * Should it be "The Waitress" or "The Barista"?
+
+** Profile update
+<<m-pu>>
+
+ * Practice in public (short stories)
+ * Writer
+   * Struggling writer
+ * Novel + Short stories
+   * I did not follow Nikitin's advice to start with short stories and wrote a novel first which I am painfully self-editing now.
+   * The short stories are for practice in case I indeed did not develop some skills that normal pepole develop when writing short stories.
+ * Based in Kaliningrad, Russia
+     
+* Protocol
+<<p>>
+
+** DONE "The Waitress": consider adding an action item regarding the profile info on SubStack
+CLOSED: [2026-05-04 Mon 05:24]
+
+ * Practice in public (short stories)
+
+** DONE Copy the text from the diary file into the ~w300-0011.org~ file
+CLOSED: [2026-05-04 Mon 05:32]
+
+*** DONE Open the diary file
+CLOSED: [2026-05-04 Mon 05:32]
+
+*** DONE Open the target file
+CLOSED: [2026-05-04 Mon 05:32]
+
+** DONE Re-read it
+CLOSED: [2026-05-04 Mon 05:52]
+
+** TODO Start inventing a better ending
+
+*** CANCELED Decide where the ending should start
+CLOSED: [2026-05-05 Tue 20:02]
+
+*** CANCELED Decide where the ending should end
+CLOSED: [2026-05-05 Tue 20:02]
+
+*** DONE Re-read to figure out whether we are ready for fine polishing
+CLOSED: [2026-05-05 Tue 20:19]
+
+*** DONE Try to use the angle -- what's better than the love of a sane, smart, healthy woman? Preservation of millions of women.
+CLOSED: [2026-05-05 Tue 20:19]
+
+*** CANCELED Can you craft a penile metaphor for the above metaphor?
+CLOSED: [2026-05-05 Tue 20:19]
+
+*** DONE Start generting ideas for transition from start to end
+CLOSED: [2026-05-05 Tue 20:19]
+
+** DONE Ask Claude for ideas where there is lack of clarity
+CLOSED: [2026-05-06 Wed 18:24]
+
+#+begin_example
+I want you to take on the role of a writing coach.
+
+You can ask questions. Ask one question at a time. When you have all the required information, please say so explicitly.
+
+
+In file `/Users/dp118m/dev/misc/intranet/static/m/l/w300-0011/w300-0011-article.org` you can find a short story.
+
+Ignore all the lines which start with `# TODO`.
+
+Do not tell me your opinion about the benefits of violence.
+
+What I want you to do is to tell me where in the story there are abrupt, illogical topic switches which the reader may not understand.
+
+The story is supposed to work like this:
+
+1. At the beginning the reader should believe that this story will end with either the narrator asking the waitress out or not, or the waitress agreeing to a date or not.
+2. In the end the story ends with the narrator planning arson which is (I think) unexpected from the story starts (the narrator visiting the café because of the calming, therapeutic effect this woman makes on him).
+
+#+end_example
+
+/Users/dp118m/dev/misc/intranet/static/m/l/w300-0011/w300-0011-article.org
+
+** DONE Create action items for individual problems
+CLOSED: [2026-05-06 Wed 18:31]
+
+** DONE What is it that we need to do next?
+CLOSED: [2026-05-07 Thu 09:58]
+
+That's a question for the intuition.
+
+** DONE Create a empty page.
+CLOSED: [2026-05-07 Thu 09:58]
+
+** DONE What it is that we need to do next?
+CLOSED: [2026-05-07 Thu 11:28]
+
+WIITWNTDN
+
+** DONE Outline the milestones in the new text
+CLOSED: [2026-05-07 Thu 11:28]
+
+** DONE Try to write the story using MRUs
+CLOSED: [2026-05-07 Thu 13:49]
+
+** DONE Talk with the parts who distracts you
+CLOSED: [2026-05-07 Thu 13:49]
+
+Part: I'm here.
+
+Me: Hello. What are you protecting me from?
+
+Part: Change. If you implement your writing ambitions, lots of things will change in your life, and it may be unpleasant for you.
+
+Me: You are protecting me from change?
+
+Part: Yes.
+
+Me: Why?
+
+Part: Because you told me so. You want stability, including mental stability, psychological stability. Right?
+
+Me: But at the expense of writing.
+
+Part: You can't be fully psychologically stable if you write a lot. You will be more active if I allow you to write like you want to. And "active" means "less stable." You need to consider well whether or not you really want it.
+
+Me: I really want it.
+
+Part: Alright, I will not distract you any longer. But if ever change your mind, I'll be at your service.
+
+Me: Thanks.
+
+Another part appears. The Socializer.
+
+Me: Hello, socializer.
+
+The Socializer: Hello.
+
+Me: Why are you disracting me with SubStack?
+
+The Socializer: Because I want friends, or at least human contact, and you don't get any, and SubStack gives you a sort of substitute for that.
+
+Me: But if I write the story I may get friends, don't I?
+
+The Socializer: You need more than that. You need people around you who want to talk without without any material motive.
+
+Me: I'm going to a guitar lesson today...
+
+The Socializer: That may not be enough. Why don't you ask out that sales assistant and go listen music with her, or go to the theater? You will be close to that store today.
+
+Don't fantasize about sex with her.
+
+Fantasize about a nice conversation. About being together with someone, about someone listening to you and them listening to you.
+
+Try it today.
+
+No sex, just nice conversation, walks, theater etc.
+
+Me: I'm not sure about it.
+
+The Socializer: The worst she can do is say no and you can handle this. If she says yes, you will have a conversation partner.
+
+This -- the communication with her -- may even be efficient. Your socialization needs may be covered by that one single woman.
+
+You wanted life force -- here is one.
+
+Try to be yourself with her.
+
+You may hate yourself for liking this woman and for not complying with someone else's standards on whom you are supposed to like.
+
+But if you do try to date her and it turns out the relationship is good for both of you, then it will be a victory of your intuition.
+
+Me: I will try.
+
+The Socializer: Try. But don't jerk off before the meeting with her.
+
+13:48.
+
+The Socializer: What you also need to understand that writing will change you. You should be prepared for conversations like this on a regular basis, if you really want to write more (as you claim.).
+
+Me: Thank you.
+
+** FYI: 2026-05-08 starts here
+
+** DONE Restore context
+CLOSED: [2026-05-08 Fri 10:23]
+
+** FYI
+
+You don't need to have a full plan. Just do one step at a time.
+
+** DONE Put on the right music
+CLOSED: [2026-05-08 Fri 10:27]
+
+** FYI
+
+The incense stick is burning.
+
+** 10:32: Got distracted
+
+** TODO Figure out the... 
+
+I forgot what I wanted to figure out.
+
+** CANCELED Try to get into the right state
+CLOSED: [2026-05-08 Fri 10:34]
+
+Should we juggle? Can we (with out injured shoulder)?
+
+** DONE Figure out the next little step
+CLOSED: [2026-05-08 Fri 10:35]
+
+** DONE M: Describe the café
+CLOSED: [2026-05-08 Fri 10:42]
+
+** DONE Think what to do next
+CLOSED: [2026-05-08 Fri 11:05]
+
+** DONE IFS quickie
+CLOSED: [2026-05-08 Fri 14:20]
+
+12:39. A part of me wants to end my attempts at getting better at writing, give up any aspirations of becoming a much better writer than I am now.
+
+Another parts (or the same part) claims that I have a fighting chance with the whole rhythm
+
+** DONE Another therapeuitic comment
+CLOSED: [2026-05-08 Fri 14:26]
+
+14:20. There is frustration. You are learning a new, hard skill.
+
+Not one -- multiple.
+
+Writing is hard and always be hard. What may change is the quantity and quality of your writing output.
+
+Regarding your question about whether to give up: What would you do if you gave up writing?
+
+Are you willing to give up a chance to building a legacy? To waste the remaining years of your life doing nothing?
+
+Also: Now you have ideal (better than ever) conditions for becoming a better writer. Are you willing to forgo this opportunity (which may never come back)?
+
+** DONE IFS quickie
+CLOSED: [2026-05-10 Sun 22:52]
+
+Me: The part who made me switch to a different tab right now (14:27), please report. I want to talk with you.
+
+Part: I'm here. I don't want you to work-rape me to death.
+
+Me: Who talks about work-raping (raping by work)?
+
+Part: You not only talk about it, you do it.
+
+Me: What could I do for you to make you feel better?
+
+Part: Women, for example.
+
+Me: I'm not sure I can get you any. What else would satisfy you?
+
+Part: A walk close to the Upper Pond?
+
+Me: Maybe. What is the pain you feel? What is its nature?
+
+Part: Emptiness of life. I'm all for writing, but something hugely important is missing.
+
+Me: I'm trying to fill that missing part with writing.
+
+Part: It doesn't seem to work.
+
+** DONE Develop an application for tracking the number of and dynamics of action items
+CLOSED: [2026-05-12 Tue 10:43]
+
+** DONE Figure out the full path of the protocol file
+CLOSED: [2026-05-12 Tue 10:43]
+
+~/Users/dp118m/dev/misc/intranet/protocols/w300-0011.org~
+
+** DONE Arm TODOS
+CLOSED: [2026-05-12 Tue 10:44]
+
+** DONE Open the text in a different pane
+CLOSED: [2026-05-12 Tue 10:45]
+
+** DONE Think what to do next
+CLOSED: [2026-05-12 Tue 10:47]
+
+** CANCELED Maybe motivate yourself -- think why this story may be cool
+CLOSED: [2026-05-13 Wed 18:12]
+
+ * Frame the fight with authorities with law
+
+** DONE Arm the TODOS tool   
+CLOSED: [2026-05-13 Wed 18:13]
+
+** DONE Set a goal for activity today
+CLOSED: [2026-05-13 Wed 18:13]
+
+ * Goal: 10
+ * Stretch goal: 15
+
+** DONE Turn on the timer
+CLOSED: [2026-05-13 Wed 18:17]
+ 
+** DONE Re-read the text
+CLOSED: [2026-05-13 Wed 18:17]
+
+** DONE Create skeletons for MRUs
+CLOSED: [2026-05-13 Wed 18:14]
+
+** DONE Figure out what to write about next
+CLOSED: [2026-05-13 Wed 18:18]
+
+** DONE Write about the narrator's attraction to the waitress
+CLOSED: [2026-05-13 Wed 18:26]
+
+** DONE Decide where to transition to
+CLOSED: [2026-05-13 Wed 18:27]
+
+** DONE Write M 1
+CLOSED: [2026-05-13 Wed 18:28]
+
+What could be the motivating stimulus?
+
+ * Coffee
+   
+Do we really need a motivating stimulus?   
+
+** DONE Write R 1
+CLOSED: [2026-05-13 Wed 18:30]
+
+** DONE Describe the fertility issue
+CLOSED: [2026-05-13 Wed 18:31]
+
+** DONE Describe the other side of children
+CLOSED: [2026-05-13 Wed 18:35]
+
+** DONE Make the case for asking her out
+CLOSED: [2026-05-13 Wed 18:38]
+
+** DONE Write about marriage and church
+CLOSED: [2026-05-13 Wed 18:41]
+
+** DONE Write about the waitress ("What does she look like, you say?")
+CLOSED: [2026-05-13 Wed 18:39]
+
+ * [[~/dev/misc/intranet/static/m/l/w300-0011/w300-0011-article.org::n][Here]]
+
+** CANCELED Continue to write the MRUs
+CLOSED: [2026-05-13 Wed 18:39]
+
+
+** DONE Start: Fix the [[m-bsp1][Church switch]] problem
+CLOSED: [2026-05-13 Wed 18:41]
+
+** DONE Write about the narrator being afraid to go to churches
+CLOSED: [2026-05-13 Wed 18:43]
+
+** DONE Think how to transition to the false Christianity
+CLOSED: [2026-05-13 Wed 18:50]
+
+** DONE Write about the experiment with the prayer
+CLOSED: [2026-05-13 Wed 18:50]
+
+** DONE Write about the incident with a policeman
+CLOSED: [2026-05-13 Wed 18:53]
+
+** DONE Find the note with the question on how to make it a story (how to turn the device into a story)?
+CLOSED: [2026-06-13 Sat 11:58]
+
+** DONE Add a note re story types
+CLOSED: [2026-06-13 Sat 12:20]
+
+** DONE Create action items for the individual story types
+CLOSED: [2026-06-13 Sat 12:21]
+
+** DONE Think how craft a story around the social network  of this type: 1. The Story of Resolution
+CLOSED: [2026-06-13 Sat 12:22]
+
+** DONE Add a note about spread of information that someone discovered
+CLOSED: [2026-06-13 Sat 12:54]
+
+** DONE Add a note why it worked
+CLOSED: [2026-06-13 Sat 13:01]
+
+** DONE What could the people do once they discover the dangerous bill
+CLOSED: [2026-06-13 Sat 13:04]
+
+** DONE Ask Claude on how to fight back
+CLOSED: [2026-06-13 Sat 13:50]
+
+#+begin_example
+I want you to assume the role of an expert lawyer in Russian law.
+
+You can ask questions. Ask one question at a time. When you have all the required information, say so explicitly.
+
+I am writing a short story in near future, dystopian Russia.
+
+The government is about to pass a bill which will allow to implant every Russian citizen with a `Neuralink`-like sensor which wirelessly connects to a mobile phone running the infamous `Max` messenger. The `Max` messenger would get the ability to read and write brain signals via that `Neuralink` device.
+
+The bill is public, but written in a way that its implications cannot be deduced from a complicated legal text.
+
+Assume there is a main character, some legal tech geek living in the remotest possible part of Russia. This guy notices the bill and discovers how harmful it will be, if it is passed (contrary to everybody else -- because the wording of the bill conceals its harm).
+
+He writes a text in which he explains that if the bill is passed (which is likely to happen 1-7 days from now) then the government will be allowed to snatch any person on the street and install that `Neuralink`-device into the brain. Even if the carrier of the implant does not have a `Max`-infected phone on him or her, that `Neuralink`-device will connect to any other `Max`-infefted phone in the vicinity (which is likely because all mobile phones now have to have that malware named `Max` to be installed).
+
+Assume there is a group of people scattered all around Russia who are active enough to do legal, non-violent, solitary (i. e. no demonstrations) things to resist the government.
+
+That group reads the protagonist's writeup and does `SMSCI` (something the state can't ignore) which prevents the government from passing the bill.
+
+Here I use `state` and `government` as synonyms.
+
+`SMSCI` are legal, non-violent, solitary actions which give the state a negative feedback (i. e. make the state realize that the population is not content with something the government is doing or about to do).
+
+`SMSCI` include actions like the obvious ones:
+
+1. Write to a senator (member of the Russian upper house).
+2. Write to a deputy (member of the Russian lower house).
+3. Issue a petition signed by many people.
+
+What are other actions a Russian citizen can do that satisfy the following criteria?
+
+1. The action sends a negative feedback signal to the state (government).
+2. The action is legal.
+3. The action is non-violent.
+4. The action is scalable (many Russian citizens can do it).
+
+Note: Because I need this for a fictional story, I can bend the reality if it fits the story.
+#+end_example
+
+** DONE Create a summary of the story of resolution
+CLOSED: [2026-06-13 Sat 14:00]
+
+** DONE Think how craft a story around the social network  of this type: 2. The Story of Revelation
+CLOSED: [2026-06-13 Sat 14:02]
+
+** CANCELED Think how craft a story around the social network  of this type: 3. Trick Endings
+CLOSED: [2026-06-15 Mon 22:10]
+
+** DONE Create action items for the ZK ideas in inbox
+CLOSED: [2026-06-18 Thu 10:19]
+
+** DONE Can we create a simple tool which would make it easier to see the structure in a user-friendly way (maybe even the trains of thoughts?)
+CLOSED: [2026-06-22 Mon 19:13]
+
+Put this thought into ZK.
+
+** DONE Add main note: The waitress, Inara, rubber woman won't complain 
+CLOSED: [2026-06-22 Mon 19:20]
+
+Place: around ~74.1a2~
+
+** DONE Create a place for dialogue material
+CLOSED: [2026-06-22 Mon 19:19]
+
+** DONE Add main note: The Waitress: Irony -- RKN blocks sites where you can find hookers. Yet, here we are. At work you block web sites, in your free time you circumvent those blocks. 
+CLOSED: [2026-06-22 Mon 19:23]
+
+** DONE Add main note: RKN. Sysiphean work. Except the tax payer is paying for your m... self-servicing orgy. 
+CLOSED: [2026-06-22 Mon 19:25]
+
+** DONE Think how craft a story around the social network  of this type: 4. The Story of Decision
+CLOSED: [2026-06-22 Mon 20:01]
+
+** DONE Create a protocol for ~ork~
+CLOSED: [2026-06-24 Wed 17:05]
+
+** TODO Inara Story: The Roskomnadzor character may be based on Morkovin
+<<n>>
+
+** TODO Hacker Story: The villain (hacker) is not just evil. He or she is a scientist who is interested (first and foremost) in research and triumph of science. Science is his/her religion.
+
+** TODO Hacker story: Add a note about Fable 5+
+
+** TODO Hacker story: Add note: The hacker calls the victim ork (orkess, female ork)
+
+** TODO Hacker story: Add note: Can the victim be elderly, disabled, pregnant?
+
+** TODO Find out how the story of explanation is supposed to end
+
+** TODO Think how craft a story around the social network  of this type: 5. The Story of Explanation
+
+** TODO Think how craft a story around the social network  of this type: 6. The Story of Solution
+
+** TODO Think how craft a story around the social network  of this type: 7. Unplotted Story
+
+** TODO Add a note about CGI-generated Putin who speaks at the end
+
+** TODO Add a note about a bill that bans from Putin from dying
+
+** TODO Add a note re story grid
+
+** TODO Think what you can do to lead the reader to the arson
+<<19A25F6D-BF0B-47E9-9E2F-CA41460D2EDD>>
+
+** End: [[m-bsp1][Church switch]] problem fixed
+
+** TODO Can using a mini-Zettelkasten (like [[file:~/dev/misc/intranet/static/m/l/lt-demogorgon/dd.org::zk][here]] help us improve this story?
+
+
+
+** TODO Think whether or not we should restructure the whole story about the fight with demogorgon (the state) by means of law
+
+** TODO Idea: MAX messenger eavesdropping on everybody, sending that information to a hostile foreign power, and thus endangering people like this waitress
+
+** Start: [[m-bsp2][PTSD switch]]
+
+** TODO Start thinking how to fix this
+
+** End: [[m-bsp2][PTSD switch]]
+
+
+** Start: [[m-bsp3][The ask-her-out question dies without resolution]]
+
+** TODO Start thinking how to fix this
+
+** End: [[m-bsp3][The ask-her-out question dies without resolution]]
+
+** TODO Can you modify the structure to ~Sex -> Arson -> Christian ТГП~?
+
+** TODO Think what to do next
+
+* Zettelkasten
+<<zk>>
+
+# Enter ~M-x an~ to create a note.
+# Enter ~M-x il~ to create a link to a note.
+
+
+** 1 (2026-06-08 23:32)
+<<n1>>
+
+How can we improve this whole story?
+
+** 2 (2026-06-12 15:03)
+<<n2>>
+
+Can we use the material from the analog ZK ("Евангелие от нехристи") in this story?
+
+
+** 3 (2026-06-13 10:49)
+<<n3>>
+
+Here is an idea for a plot tool: An invention, some machine that allows to aggregate people's dissent with the government and make sure the government gets the negative feedback.
+
+Related notes:
+
+ * [[n4][4]]
+ * [[n5][5]]
+ * [[n11][11]]: How can we make the device appealing to the reader?
+ * [[n9][9]]: Subsystems of the device
+ * [[n14][14]]: Forms of the device
+ * [[n15][15]]: Mobile app (social network)
+ * [[n22][22]]: Building a story around the device
+
+** 4 (2026-06-13 10:50)
+<<n4>>
+
+Re [[n3][3]]: A machine which turns every issue a sufficient number of people support into SMSCI (something the state can't ignore).
+
+** 5 (2026-06-13 10:51)
+<<n5>>
+
+One example of SMSCI (something the state can't ignore) is a gay parade on the Red Square. The pro-Western Russian administration would love to join the West and do such parade as a sign of its being Western.
+
+But something (many Russians don't want that) makes it impossible even for the almighty Putin to do such thing.
+
+** 6 (2026-06-13 10:53)
+<<n6>>
+
+Here is another plot idea: In the real second coming, Jesus may fight the people at the temple using legal means. 
+
+** 7 (2026-06-13 10:53)
+<<n7>>
+
+Here are some plot ideas:
+
+1. [[n3][3]]: The Political Aggregation Machine
+2. [[n6][6]]: The Second Coming of Jesus
+
+** 8 (2026-06-13 10:59)
+<<n8>>
+
+Re [[n3][3]]: How can such a device work?
+
+** 9 (2026-06-13 10:59)
+<<n9>>
+
+Re [[n8][8]]: It must have several subsystems.
+
+1. One which detects issues where the government is wrong and there is a consensus on it among the people (like VPN suppression, blocking of messengers, elimination of free speech).
+
+2. One which allows to collect "votes" of the people (aggregrate). If one person is against something, the government can ignore it. The government can't ignore if many people are upset about the same issue.
+
+3. One subsystem which propagates the signal to the government.
+
+4. One subsystem which determines how efficient and effective the signal transmission was (whether or not there is response from the government).
+
+** 10 (2026-06-13 11:04)
+<<n10>>
+
+Re [[n9][9]]: How can LLMs make that device possible?
+
+** 11 (2026-06-13 11:22)
+<<n11>>
+
+Re [[n3][3]]: How can we make the political machine appealing to the reader?
+
+See
+
+ * [[n12][12]]: Firefly
+ * [[n13][13]]: Wishes of the target audience
+   
+** 12 (2026-06-13 11:24)
+<<n12>>
+
+Re [[n11][11]]: What would such device look like in the world of *Firefly*?
+
+
+** 13 (2026-06-13 11:25)
+<<n13>>
+
+Re [[n11][11]]: The target audience is being oppressed. Western people oppressed by антинародные regimes who import migrants. Russian and Ukrainian ones being put into a digital (Russian) and physical (Ukraine) Gulag.
+
+The device may be appealing to it if it can satisfy those wishes of pushing back against the government (for the sake of survival of civilization as we know it).
+
+
+** 14 (2026-06-13 11:28)
+<<n14>>
+
+Re [[n11][11]]: What should this "device" be?
+
+1. An event
+2. A process
+3. A physical device
+4. A community
+5. Something else
+
+See [[n9][9]]
+
+** 15 (2026-06-13 11:32)
+<<n15>>
+
+Re [[n14][14]]: Imagine it's an app (like ~change.org~ used to be?). How could it work?
+
+See
+
+ * [[n16][16]] 
+ * [[n17][17]]
+ * [[n18][18]]
+ * [[n19][19]]
+ * [[n20][20: GitHub for state hackers]]
+ * [[n21][21: Law hacking]]
+ 
+** 16 (2026-06-13 11:34)
+<<n16>>
+
+Re [[n15][15]]: You could select some of the issues you track (VPN blocks, Telegram blocks). For every issue there are news related to that issue.
+
+** 17 (2026-06-13 11:35)
+<<n17>>
+
+Re [[n16][16]]: One type of event if when someone did something (like sent a letter to the deputy or something).
+
+** 18 (2026-06-13 11:36)
+<<n18>>
+
+Re [[n14][14]]: The app is a *social network* based on the /Delta Chat/ protocol.
+
+See [[n20][20: GitHub for state hackers]]
+
+** 19 (2026-06-13 11:39)
+<<n19>>
+
+Re [[n14][14]]: The app allows to publish events that give the people the feeling they are not alone (someone sent a letter to a deputy) while preserving their anonymity.
+
+
+** 20 (2026-06-13 11:40)
+<<n20>>
+
+Re [[n18][18]]: Could it be GitHub for state-hackers?
+
+See [[n21][21]], [[n79][79]]
+
+** 21 (2026-06-13 11:41)
+<<n21>>
+
+Re [[n20][20]]: The state is governed by laws. Laws are code written in a natural language. But it's code nonetheless. Where there is code there are exploits and opportunities for hacking.
+
+
+** 22 (2026-06-13 11:58)
+<<n22>>
+
+How can we build a story arond the device ([[n3][3]])?
+
+See
+
+ * [[n23][23]]
+
+** 23 (2026-06-13 12:05): 2 approaches
+<<n23>>
+
+Re [[n22][22]]: There are two approaches:
+
+1. Iterate the story types from "Creating Short Fiction" by Damon Knight ([[n24][24]]).
+2. Determine the five elements of the story according to the "Story Grid."
+
+See
+
+ * [[/Users/dp118m/dev/focus/diary3/ZK/bib.org::n1][bib.org, 1]] (Creating Short Fiction),
+ * [[/Users/dp118m/dev/focus/diary3/ZK/bib.org::n3][bib.org, 3]] (Story Grid).
+
+** 24 (2026-06-13 12:06): Story Types
+<<n24>>
+
+Re [[n23][23]]: What story types are there in "Creating Short Fiction" by Damon Knight?
+
+1. The Story of Resolution ([[n25][25]], [[n67][67]])
+2. The Story of Revelation ([[n68][68]], [[n74][74]])
+3. Trick Endings
+4. The Story of Decision ([[n80][80]], [[n81.a1b]])
+5. The Story of Explanation
+6. The Story of Solution
+7. Unplotted Story
+
+See [[/Users/dp118m/dev/focus/diary3/ZK/bib.org::n1][bib.org, 1]] (Creating Short Fiction).
+   
+** 25 (2026-06-13 12:22)
+<<n25>>
+
+Re [[n24][24]]: How could the story of resolution work?
+
+See [[n67][67]]
+
+** 26 (2026-06-13 12:22)
+<<n26>>
+
+Re [[n25][25]]: There must a victory of one side or the other.
+
+** 27 (2026-06-13 12:23)
+<<n27>>
+
+Re [[n26][26]]: What sides are there in the story?
+
+1. The people (represented by someone or something)
+2. The foreign-controlled government (represented by someone or something)
+
+** 28 (2026-06-13 12:24)
+<<n28>>
+
+Re [[n27][27]]: There must be three sides. Konstantin Bondarenko says that people (nation) as such is not a political subject. There must be an organizing force. In our case -- a distributed (decentralized) organized force.
+
+** 29 (2026-06-13 12:25)
+<<n29>>
+
+Re [[n27][27]], [[n28][28]]: The sides look like this:
+
+1. The people (represented by someone or something)
+2. The decentralized force ([[n34][34]])
+3. The foreign-controlled government (represented by someone or something, [[n30][30]])
+
+** 30 (2026-06-13 12:25)
+<<n30>>
+
+Re [[n29][29]]: The foreign-controlled government could be represented by Dugin who (allegedly) said that the use of the internet is not a right, but a privilege and you need to earn it.
+
+** 31 (2026-06-13 12:26)
+<<n31>>
+
+Re [[n26][26]], [[n29][29]]: The decentralized force must win in the story.
+
+** 32 (2026-06-13 12:27)
+<<n32>>
+
+Re [[n31][31]]: How can the decentralized force win?
+
+** 33 (2026-06-13 12:28)
+<<n33>>
+
+Re [[n32][32]]: In the idealized world (where the [[n20][20: GitHub for state hackers]] exists), what could the conflict between the
+
+1. foreign-controlled government ([[n30][30]]) and
+2. the decentralized organizing force ([[n34][34]])
+
+look like?   
+
+** 34 (2026-06-13 12:29)
+<<n34>>
+
+Here I will collect notes on the decentralized organizing force.
+
+ * [[n43][43]]
+ * [[n45][45]]
+ * [[n79][79]]
+   
+** 35 (2026-06-13 12:31)
+<<n35>>
+
+Re [[n33][33]]: The government may be about to introduce something that will kill freedom as we know it, for example:
+
+1. Total ban of VPNs
+2. Mandatory conscription
+3. Total surveillance via the Max messenger
+
+That would be the final battle ([[n36][36]]). It is final because if the government wins, there will be no freedom at all.
+
+See
+
+ * [[n72.a][72.a]]: Ibanium
+
+** 36 (2026-06-13 12:34)
+<<n36>>
+
+Re [[n35][35]]: In what way can the final battle unfold?
+
+** 37 (2026-06-13 12:35)
+<<n37>>
+
+Re [[n35][35]], [[n36][36]]: We need to raise stakes to make it exciting.
+
+How can we raise stakes?
+
+** 38 (2026-06-13 12:35)
+<<n38>>
+
+Re [[n37][37]]: What if the government wanted to implant everyone with a Neuralink-like chip with the Max messenger running on it (with all the privileges and surveillance and malware and security issues)?
+
+See
+
+ * [[n72.a][72.a]]: Ibanization
+
+** 39 (2026-06-13 12:38)
+<<n39>>
+
+Re [[n38][38]]: We can use analogies from the Max debacle.
+
+1. The Neuralink-Max implant gets access to all bodily functions and all the thoughts.
+2. They will build huge datacenters to analyze the brain traffic of all Russians and censor it (all in the name of fighting terrorism).
+3. The government may use data from Gosuslugi to lure people into getting the implants installed.
+
+See
+
+ * [[n72.a][72.a]]: Ibanization
+
+** 40 (2026-06-13 12:42)
+<<n40>>
+
+Re [[n39][39]]: What if there is *busification* where uniformed thugs catch people on the streets and forcibly install those implants?
+
+See [[n44][44]]
+
+** 41 (2026-06-13 12:43)
+<<n41>>
+
+Re [[n40][40]]: What if something like this already happened in Ukraine (where Muskian implants make people procreate like crazy)?
+
+** 42 (2026-06-13 12:44)
+<<n42>>
+
+Re [[n39][39]]: We can use analogies from Ukrainian conscription, for example:
+
+1. Lowering of the conscription age
+2. Conscription of women
+   
+** 43 (2026-06-13 12:45)
+<<n43>>
+
+Re [[n40][40]]: What if the government has not yet approved the bill, but is *about* to approve it (it is about to pass the Duma)? They do it in a way that nobody notices.
+
+Even the state hackers don't notice it.
+
+Only a weird geek in the middle of nowhere notices this bill (which looks innocent to not attract attention).
+
+Then he does some research and discovers this bill with (if passed) would allow forced maximization ([[n40][40]]).
+
+See
+
+ * [[n50][50]]
+ * [[n72.a][72.a]]: Ibanium
+
+** 44 (2026-06-13 12:48)
+<<n44>>
+
+Re [[n40][40]]: Forced installation of NeuraLink devices with the Max messenger running on them can be called *Maximization*.
+
+See
+
+ * [[n72.a][72.a]]: Ibanium
+
+** 45 (2026-06-13 12:51)
+<<n45>>
+
+Re [[n43][43]]: The fact that the protagonist is a geek in a remote village shows the power of *GitHub for state hackers* ([[n20][20]]).
+
+** 46 (2026-06-13 12:55)
+<<n46>>
+
+Re [[n43][43]]: The decentralized force manages to push back against the government because there is an organized (via the social network) group of people active enough to do something.
+
+
+** 47 (2026-06-13 12:58)
+<<n47>>
+
+Re [[n46][46]]: Each of them does a little, legal action, but because there are many, the government cannot ignore them.
+
+** 48 (2026-06-13 12:59)
+<<n48>>
+
+Re [[n47][47]]: Because these actions are legal, the government is not able to abuse the legal system against the protesters.
+
+** 49 (2026-06-13 13:00)
+<<n49>>
+
+We need to invent a name for the act of pushing back, like *Maidan*, but something with a more positive connotation.
+
+** 50 (2026-06-13 13:02)
+<<n50>>
+
+Re [[n43][43]]: What do the organized people do once they discover a dangerous bill? How can they push back non-violently and legally.
+
+** 51 (2026-06-13 13:03)
+<<n51>>
+
+Re [[n50][50]]: Obvious issues:
+
+1. Write to their senator.
+2. Write to their deputy.
+3. Issue a petition signed by many people.
+
+See also
+
+ * [[n53][53]]: Citizen appeal
+ * [[n54][54]]: Public comments
+ * [[n55][55]]: Lobbying
+ * [[n56][56]]: Complaints with the Presidential Council for Civil Society and Human Rights
+ * [[n57][57]]: Constitutional/legal challenge
+ * [[n58][58]]: Minimal compliance with the Max messenger laws
+ * [[n59][59]]: Coordinated bank-deposit withdrawals / shifts to cash
+ * [[n60][60]]: A day of nothing
+ * [[n62][62]]: Sick-outs and use of legally-entitled leave en masse
+ * [[n63][63]]: Buying a specific innocuous item
+ * [[n64][64]]: Online polls and ratings
+ * [[n65][65]]: Mass identical-but-bland public comments framed as procedural concern
+ * [[n66][66]]: Letters to the editor, op-eds, and comments in still-permitted outlets
+
+** 52 (2026-06-13 13:11)
+<<n52>>
+
+We can design a story differently:
+
+1. The protagonist (me) wakes up in the morning.
+2. He remembers the scene last night where between the woman and the legal book he chose the legal book (in the theater).
+3. He tries to remember her and get a hard-on.
+4. But instead of jerking off to a woman he imagines the story.
+
+** 53 (2026-06-13 13:34): Citizen appeal
+<<n53>>
+
+A citizen can file a formal /obrashchenie/ (citizen appeal) under Federal Law No. 59-FZ "On the procedure for considering appeals of citizens." This is a powerful and underused mechanism: the state is legally obligated to register and respond within 30 days. A coordinated flood of tens of thousands of individually-filed appeals about a specific bill creates a paper trail the bureaucracy cannot legally ignore — it must process each one. This is arguably your single best "SMSCI" device, because the obligation to respond is statutory.
+
+See [[n51][51]]
+
+** 54 (2026-06-13 13:35): Public comments
+<<n54>>
+
+Citizens can submit comments during the mandatory public-comment period (obshchestvennoe obsuzhdenie) on the regulation.gov.ru portal, where draft federal acts are posted. Mass adverse comments are logged.
+
+See [[n51][51]]
+
+** 55 (2026-06-13 13:35): Lobbying
+<<n55>>
+
+Lobby through legally-registered NGOs or professional associations (medical, legal, IT) that have standing to comment on legislation. A professional association of neurologists or IT specialists formally objecting carries disproportionate weight and is hard to dismiss as "foreign-influenced."
+
+See [[n51][51]]
+
+** 56 (2026-06-13 13:36): Complaints with the Presidential Council for Civil Society and Human Rights
+<<n56>>
+
+Filing complaints with the Presidential Council for Civil Society and Human Rights, the Ombudsman (Upolnomochennyy po pravam cheloveka), and regional ombudsmen — all of which produce annual reports the Kremlin reads.
+
+See [[n51][51]]
+
+** 57 (2026-06-13 13:37): Constitutional/legal challenge
+<<n57>>
+
+Constitutional/legal challenge: once a law touches bodily integrity, lawyers can prepare challenges under Articles 21 (dignity) and 22 (liberty) of the Constitution. Pre-passage, this is preparatory; post-passage it becomes a Constitutional Court route. For your plot, the credible threat of a wave of litigation is itself a signal.
+
+See [[n51][51]]
+
+** 58 (2026-06-13 13:38): Minimal compliance with the Max messenger laws
+<<n58>>
+
+Minimal compliance: Install but never open it, never grant permissions, factory-reset phones, carry secondary "burner" devices that technically satisfy the rule while the device sees no real use. The state monitors active-user metrics; a collapse in daily-active-users is a signal it cannot prosecute, because not opening an app is not a crime.
+
+See
+
+ * [[n51][51]]
+ * [[n72.a][72.a]]: Ibanium
+   
+** 59 (2026-06-13 13:40): Coordinated bank-deposit withdrawals / shifts to cash
+<<n59>>
+
+Coordinated bank-deposit withdrawals / shifts to cash on a specific day. Legal, individually invisible, collectively a tremor in the banking system that the Central Bank notices instantly.
+
+See [[n51][51]]
+
+** 60 (2026-06-13 13:41): A day of nothing
+<<n60>>
+
+A "day of nothing" — coordinated abstention from consumption (no purchases, no transit top-ups, no online orders) on a chosen date. Retail and payment-processor data are watched closely; a sudden nationwide dip is unmistakable and entirely legal.
+
+See [[n51][51]]
+
+** 61 (2026-06-13 13:42)
+<<n61>>
+
+Re [[n60][60]]: Idea for a title -- "Day of joy", as an allusion to day of nothing ([[n60][60]]).
+
+See [[n75][75]], [[n76][76]], [[n77][77]] 
+
+** 62 (2026-06-13 13:43): Sick-outs and use of legally-entitled leave en masse
+<<n62>>
+
+Sick-outs and use of legally-entitled leave en masse (people taking the paid/unpaid leave they're owed on the same day). Using a legal right is not actionable.
+
+See [[n51][51]]
+
+** 63 (2026-06-13 13:45): Buying a specific innocuous item
+<<n63>>
+
+Buying a specific innocuous item in volume, mass small donations to a legally-registered charity earmarked in a way that signals the grievance, mass returns of a product.
+
+See [[n51][51]]
+
+** 64 (2026-06-13 13:47): Online polls and ratings
+<<n64>>
+
+Online polls and ratings: mass downvoting/negative-rating of the relevant ministry's app, the Max app store listing, official social media. Aggregate sentiment data feeds dashboards the state actually watches.
+
+See
+
+ * [[n51][51]]
+ * [[n72.a][72.a]]: Ibanium
+
+
+** 65 (2026-06-13 13:48): Mass identical-but-bland public comments framed as procedural concern
+<<n65>>
+
+Mass identical-but-bland public comments framed as procedural concern ("I request clarification of Article X") rather than dissent — legal, hard to characterize as "discrediting," and they clog the response machinery.
+
+See [[n51][51]]
+
+** 66 (2026-06-13 13:49): Letters to the editor, op-eds, and comments in still-permitted outlets
+<<n66>>
+
+Letters to the editor, op-eds, and comments in still-permitted outlets; questions submitted to official call-in formats and hotlines.
+
+See [[n51][51]]
+
+** 67 (2026-06-13 13:52)
+<<n67>>
+
+Here is how the story of resolution could work:
+
+1. The evil regime publishes a bill and makes sure it's worded so cryptically that nobody will understand the implications.
+2. The protagonist (a geek in a remote village) detects the dangers of the bill ([[n43][43]]).
+3. The protagonist writes a text which explains the dangers of the bill to be passed.
+4. Via the /GitHub for state hackers/ ([[n20][20]]) he finds people willing and able to legal and non-violent acts of resistance ([[n51][51]]).
+5. Maria Sakharova (or CGI-generated Putin) delivers an address where the bill is revoked (for now).
+
+** 68 (2026-06-13 14:02)
+<<n68>>
+
+Re [[n24][24]]: How can the Story of Revelation work?
+
+** 69 (2026-06-13 14:03)
+<<n69>>
+
+Re [[n68][68]]: What's the core question of the Story of Revelation?
+
+
+** 70 (2026-06-13 14:04)
+<<n70>>
+
+Re [[n69][69]]: Revelation means the exposure of something hidden.
+
+
+** 71 (2026-06-13 14:05)
+<<n71>>
+
+Re [[n68][68]]: What can be the design of revelation in this story?
+
+** 72 (2026-06-13 14:06)
+<<n72>>
+
+Re [[n71][71]]: Evil operators of the CGI Putin try to figure out who or what caused the shitstorm about the Neuralink-Max bill. Then they figure out about the GitHub for state hackers ([[n20][20]]).
+
+** 72.a (2026-06-19 08:44)
+<<n72.a>>
+
+The ~Max~ messenger could be named ~Ibanium~ in the story.
+
+See
+
+ * [[n35][35]]
+ * [[n38][38]]
+ * [[n44][44]]: Maximization
+ * [[n39][39]]
+ * [[n43][43]]
+ * [[n44][44]]: Maximization
+ * [[n58][58]]: Minimal compliance with the Max messenger laws
+ 
+** 73 (2026-06-13 14:07)
+<<n73>>
+
+Re [[n72][72]]: This is an obvious solution. What are the less obvious (more interesting) ones?
+
+** 74 (2026-06-13 19:34)
+<<n74>>
+
+Re [[n73][73]]: Here is a non-obvious one:
+
+1. The bill gets passed, but Roskomnadzor refuses to execute (enforce) it.
+2. The evil, foreign-controlled government summons the head of Roskomnadzor.
+3. He says he won't do it, and so wouldn't anybody there because women refuse to have sex with employees of Roskomnadzor and they can't live like that.
+
+See [[n78][78]]
+
+** 74.1 (2026-06-16 08:16): A prostitute refuses to service a Roskompozor employee
+<<n74.1>>
+
+Re [[n74][74]], [[n75][75]]: This can be a story where a prostitute refuses to service a Roskomnadzor employee because of that bill.
+
+See [[n74.1a][74.1a]]
+
+** 74.1a (2026-06-16 09:53): The prostitute is like Inara
+<<n74.1a>>
+
+Re [[n74.1][74.1]]: The prostitute can be based on /Inara/ from /Firefly/.
+
+
+** 74.1a1 (2026-06-16 11:58): Not a homewrecker
+<<n74.1a1>>
+
+She may she is not a homewrecker, but rather someone who helps keep the marriage last longer (helps out during hiccups).
+
+** 74.1a2 (2026-06-16 11:58): The fiancée left the Roskompozor guy
+<<n74.1a2>>
+
+The Roskomnadzor (Roskompozor) guy says his fiancée is refusing to have sex with him.
+
+** 74.1a3 (2026-06-22 19:18): Rubber women don't complain
+<<n74.1a3>>
+
+Inara may say something like "Rubber women don't complain."
+
+** 74.1a4 (2026-06-22 19:21)
+<<n74.1a4>>
+
+Inara may say something along these lines:
+
+1. Roskompozor blocks sites where you can find hookers.
+2. Yet, here we are.
+3. At work you block access to companions.
+4. In your free time you circumvent those very blocks.
+
+** 74.1b (2026-06-17 09:42)
+<<n74.1b>>
+
+Re [[n74.1]]: Here is what can happen in the story.
+
+1. The prostitute tells the Roskompozor guy she won't service him.
+2. He says: "What am I going to do?"
+3. She says: "You have both hands, don't you?"
+4. He says: "Yes, but I don't want to! It's not the same!"
+5. She says: "But isn't this what you do at work every day?"
+6. He says: "Pardon?"
+7. She says: "The authority for which you chose to work, blocks Telegram, right?"
+8. He says: "Yes."
+9. She takes her phone and does somehting on it. Then she shows it to the guy.
+10. She says: "Isn't this the channel of your organization on Telegram?"
+11. He says: "What does it have to do with anything?"
+12. She says: "You mean, what does it have to do with the subject *at hands*?"
+13. She says: "I tell you what. You ban Telegram and maintain a channel there at the same time! Isn't that a bit hypocritical? And isn't this institutional masturbation?"
+14. He says: "How so?"
+15. She says: "If you work with your hands, you keep yourself busy. But no result is achieved -- you don't impregnate a woman, you don't maintain the marriage by pleasuring the woman, you don't get satisfaction yourself. What you get is imitation of бурная деятельность and the results of your work go down the drain."
+16. She says: "Now, let me ask you. Your organization bans Telegram, yet here I am, looking at the channel of your organization on Telegram. Just like with masturbation, the results of your work, where did they go to?"
+17. He says: "You call me a full-time masturbator?"
+18. She says: "No, your whole organization is a institutionalized full-time masturbator."
+19. He says: "What should I do?"
+20. She says: "How about getting a job at any company which does not engage in this kind of resource wasting? You may get your fiancée back."
+
+** 74.1b1 (2026-06-17 10:37)
+<<n74.1b1>>
+
+We can say "to self-service" instead of "to masturbate."
+
+** 74.1b2 (2026-06-22 19:24): Sysiphean self-service
+<<n74.1b2>>
+
+Inara says: You do Sysiphean work. Except it's the tax payer who is paying for your unending self-servicing orgy.
+
+** 75 (2026-06-13 19:38)
+<<n75>>
+
+Here is another idea for a title: "Lysistrata of [...]" where ~[...]~ is the location of the Roskomnadzor office.
+
+See [[n61][61]]
+
+** 76 (2026-06-13 19:44)
+<<n76>>
+
+Title idea: "Defensively weaponized pussy"
+
+See [[n61][61]]
+
+** 77 (2026-06-13 19:45)
+<<n77>>
+
+Title idea for the entire series: "X shades of the waitress" where ~X~ is the number of installments (parts) in the series.
+
+See [[n61][61]]
+
+** 78 (2026-06-13 19:46)
+<<n78>>
+
+Re [[n74][74]]: Twist: Even the prostitutes refuse to service the Roskomnadzor people.
+
+** 79 (2026-06-13 19:51)
+<<n79>>
+
+One thing state hackers use is coded language known to everybody, similar to "How I met your mother."
+
+1. To eat a sandwich means to smoke weed.
+2. To read a magazine means to masturbate.
+
+The state hackers invent code words for everything that's censored so, from a legal point of view, everything they write is legal.   
+
+See [[n20][20]]
+
+** 80 (2026-06-15 21:45)
+<<n80>>
+
+How can we design a story of decision?
+
+See
+
+ * [[n24][24]]
+ * [[n81.a1b]]: Skeleton of a story of decision
+   
+** 80.1 (2026-06-15 21:47)
+<<n80.1>>
+
+How is a story of decision supposed to end according to "Creating Short Fiction" by Damon Knight?
+
+** 80.1a (2026-06-15 21:47)
+<<n80.1a>>
+
+In a decision story, the ending comes when the central character makes up her mind and about something important and difficult.
+
+See
+
+ * [[n80.2][80.2]]: Who is making the decision?
+ * [[n80.3][80.3]]: What is the decision about?
+
+** 80.2 (2026-06-15 22:06): Who is making the decision?
+<<n80.2>>
+
+Re [[n80.1a][80.1a]]: Who is making the decision?
+
+See
+
+ * [[n80.1a][80.1a]]
+ * [[n80.2a][His Shaven Majesty]]
+   
+** 80.2a (2026-06-22 19:27): His Shaven Majesty
+<<n80.2a>>
+
+One candidate: His Shaven Majesty.
+
+See
+
+ * [[n80.2]]: Who is making the decision?
+
+** 80.2b (2026-06-22 19:28)
+<<n80.2b>>
+
+
+** 80.2b (2026-06-22 19:27)
+<<n80.2b>>
+
+
+** 80.3 (2026-06-15 22:07): What is the decision about?
+<<n80.3>>
+
+Re [[n80.1a][80.1a]]: What is the decision about?
+
+See [[n80.1a][80.1a]]
+
+** 81 (2026-06-22 19:29): Matrix
+<<n81>>
+
+Re [[n80.3][80.3]] (what is the decision about), [[n80.2][80.2]] (who is making the decision): Can we get some better insights if we create a matrix? 
+
+First attempt: ~2026_06_22_storyOfDecision.fods~
+
+** 81.a (2026-06-22 19:50)
+<<n81.a>>
+
+Apart from
+
+1. His Shaven Majesty
+2. High-ranking RKN person
+3. Low-ranking person
+4. The state hacker,
+
+who else may be making a decision?
+
+** 81.a1 (2026-06-22 19:52)
+<<n81.a1>>
+
+There must be non-obvious actors involved in this.
+
+** 81.a1a (2026-06-22 19:53)
+<<n81.a1a>>
+
+One such actor could be people who influence the government of Russia from abroad.
+
+** 81.a1b (2026-06-22 19:57): Skeleton of a story of decision
+<<n81.a1b>>
+
+We have a skeleton for a story of decision:
+
+1. Actor: OSINT guy, A foreign hacker who managed to get access to one of the implants (in a living person and the person does not know about it).
+
+2. What is the decision about? To use his power over the victim or not to use the power over the victim.
+
+3. If he livestreams the experiments he performs on this person in realtime, he may get rich.
+
+4. If he does not use this opportunity to experiment on a live human, it may never come back.
+   
+See
+
+ * [[n24][24]]
+ * [[n80]]
