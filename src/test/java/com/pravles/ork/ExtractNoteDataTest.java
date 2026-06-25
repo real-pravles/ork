@@ -147,7 +147,7 @@ See [[n80.1a][80.1a]]
                                 "title", "What is the decision about?",
                                 "timestamp", "2026-06-15 22:07",
                                 "linked-notes", Arrays.asList("80.1a"),
-                                "train-of-thought", Collections.emptyList()
+                                "train-of-thought", Arrays.asList("80", "80.3")
                         )
                 ),
                 Arguments.of(

@@ -23,8 +23,10 @@ package com.pravles.ork;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -76,10 +78,10 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
         return result;
     }
 
-    private List<String> extractLinkedNotes(final String input) {
+    private Set<String> extractLinkedNotes(final String input) {
         final Matcher matcher = LINK_PATTERN.matcher(input);
 
-        final List<String> result = new ArrayList<>();
+        final Set<String> result = new HashSet<>();
 
         while (matcher.find()) {
             result.add(matcher.group(1));
