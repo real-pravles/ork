@@ -36,9 +36,45 @@
 
 (def nl (System/getProperty "line.separator"))
 
+(def note-header-re
+  #"^\*\*\s+\d+\s+\(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\)$")
+
+(defn note-header?
+  [line]
+  (boolean (re-matches note-header-re line)))
+
+(defn extract-note-txts
+  [zk-lines]
+  (let [lines (->> (str/split-lines zk-lines)
+                   (remove #(str/starts-with? % "#")))]
+    (->> lines
+         (reduce
+           (fn [{:keys [notes current]} line]
+             (cond
+               (note-header? line)
+               {:notes   (if (seq current)
+                           (conj notes (str/join nl current))
+                           notes)
+                :current [line]}
+
+               current
+               {:notes notes
+                :current (conj current line)}
+
+               :else
+               {:notes notes
+                :current nil}))
+           {:notes [] :current nil})
+         ((fn [{:keys [notes current]}]
+            (if (seq current)
+              (conj notes (str/join nl current))
+              notes))))))
+
 (defn гав
   [ctx]
-  (let [zk-lines (get ctx "zk-lines")]
+  (let [zk-lines  (get ctx "zk-lines")
+        note-txts (extract-note-txts zk-lines)]
     (println "extract-note-texts")
-    (println "zk-lines:" zk-lines))
-  ctx)
+    (println "note count:" (count note-txts))
+    (.put ctx "note-txts" note-txts)
+    ctx))

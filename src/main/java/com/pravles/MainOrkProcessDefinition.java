@@ -43,7 +43,8 @@ public class MainOrkProcessDefinition extends AbstractProcessDefinition {
     @Override
     protected void initFnBindings(final Map<String, ActivityFunction> fnBindings) {
         asList("hello-world",
-                "extract-zk-lines")
+                "extract-zk-lines",
+                "extract-note-texts")
                         .stream()
                                 .forEach(f ->
                                         fnBindings.put(f,
