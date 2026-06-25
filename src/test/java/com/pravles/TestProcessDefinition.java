@@ -21,9 +21,9 @@
 
 package com.pravles;
 
+import com.pravles.ork.MainOrkProcessDefinition;
 import com.pravles.processengine.TestActivity;
 import com.pravles.processengine.api.ActivityFunction;
-import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.Map;

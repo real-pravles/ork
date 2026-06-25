@@ -19,10 +19,8 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.pravles;
+package com.pravles.ork;
 
-import com.pravles.ork.CreateGraph;
-import com.pravles.ork.ExportGraphToGraphviz;
 import com.pravles.processengine.api.ActivityFunction;
 import com.pravles.processengine.api.ConditionFunction;
 import com.pravles.processengine.util.AbstractProcessDefinition;
@@ -30,7 +28,6 @@ import com.pravles.processengine.util.PpmnDiagramInfo;
 import com.pravles.util.ClojureActivityFunction;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

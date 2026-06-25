@@ -19,10 +19,14 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.pravles;
+package com.pravles.ork;
 
 import com.pravles.processengine.util.ProcessDefinition;
 import com.pravles.processengine.util.ProcessEngineLauncher;
+
+import java.io.File;
+
+import static java.lang.String.format;
 
 public class OrkApp {
     public static void main(final String[] args) {
@@ -31,8 +35,23 @@ public class OrkApp {
     }
 
     void run(final String[] args) {
-        final ProcessDefinition lif = new MainOrkProcessDefinition(null);
+        if ((args == null) || (args.length != 1)) {
+            System.err.println("Usage java -jar ork.jar <Zettelkasten.org>");
+            System.exit(-1);
+        }
+
+        final String pathTxt = args[0];
+        final File path = new File(pathTxt);
+
+        if (!(path.exists() && path.canRead() && path.isFile())) {
+            System.err.println(format(
+                    "File '%s' does not exist, is not readable, " +
+                    "and/or is not a file", path.getAbsolutePath()));
+            System.exit(-1);
+        }
+
+        final ProcessDefinition lif =
+                new MainOrkProcessDefinition(path.getAbsolutePath());
         new ProcessEngineLauncher().run(lif);
     }
-
 }
