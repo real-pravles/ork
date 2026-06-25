@@ -57,6 +57,10 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
     }
 
     private List<String> extractTrainOfThought(final String id) {
+        if (!id.contains(".")) {
+            return Collections.singletonList(id);
+        }
+
         final List<String> result = new ArrayList<>();
 
         String current = id;
