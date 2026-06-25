@@ -57,7 +57,8 @@ class ExtractNoteDataTest {
                                 "id", "n1",
                                 "title", "",
                                 "timestamp", "2026-06-08 23:32",
-                                "linked-notes", Collections.emptyList()
+                                "linked-notes", Collections.emptyList(),
+                                "train-of-thought", Collections.emptyList()
                         )
                 ),
                 Arguments.of(
@@ -71,7 +72,8 @@ class ExtractNoteDataTest {
                                 "id", "n2",
                                 "title", "",
                                 "timestamp", "2026-06-12 15:03",
-                                "linked-notes", Collections.emptyList()
+                                "linked-notes", Collections.emptyList(),
+                                "train-of-thought", Collections.emptyList()
                         )
                 ),
                 Arguments.of(
@@ -96,7 +98,8 @@ Related notes:
                                 "title", "",
                                 "timestamp", "2026-06-13 10:49",
                                 "linked-notes", Arrays.asList("4", "5",
-                                        "11", "9", "14", "15", "22")
+                                        "11", "9", "14", "15", "22"),
+                                "train-of-thought", Collections.emptyList()
                         )
                 ),
                 Arguments.of(
@@ -124,10 +127,40 @@ See
                                 "title", "Skeleton of a story of decision",
                                 "timestamp", "2026-06-22 19:57",
                                 "linked-notes", Arrays.asList("24",
-                                        "80")
+                                        "80"),
+                                "train-of-thought", Collections.emptyList()
                         )
                 ),
+                Arguments.of(
+                        """
+** 80.3 (2026-06-15 22:07): What is the decision about?
+<<n80.3>>
 
-        );
+Re [[n80.1a][80.1a]]: What is the decision about?
+
+See [[n80.1a][80.1a]]
+                        """,
+                        Map.of(
+                                "id", "80.3",
+                                "title", "What is the decision about?",
+                                "timestamp", "2026-06-15 22:07",
+                                "linked-notes", Arrays.asList("80.1a"),
+                                "train-of-thought", Collections.emptyList()
+                        )
+                ),
+                Arguments.of(
+                        """
+** 74.1a2 (2026-06-16 11:58): The fiancée left the Roskompozor guy
+<<n74.1a2>>                        
+                        """,
+                        Map.of(
+                                "id", "74.1a2",
+                                "title", "The fiancée left the Roskompozor guy",
+                                "timestamp", "2026-06-16 11:58",
+                                "linked-notes", Collections.emptyList(),
+                                "train-of-thought", Arrays.asList("74", "74.1", "74.1a", "74.1a2")
+                        )
+                )
+                );
     }
 }
