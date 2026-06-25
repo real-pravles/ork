@@ -37,7 +37,7 @@
 (def nl (System/getProperty "line.separator"))
 
 (def note-header-re
-  #"^\*\*\s+\d+\s+\(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\)$")
+  #"^\*\*\s+[A-Za-z0-9.]+\s+\(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\)(?::.*)?$")
 
 (defn note-header?
   [line]
