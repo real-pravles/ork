@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class CreateGraph implements com.pravles.processengine.api.ActivityFunction {
@@ -55,6 +56,18 @@ public class CreateGraph implements com.pravles.processengine.api.ActivityFuncti
         Collections.sort(noteIds);
 
         for (final String id : noteIds) {
+            if (!graph.containsVertex(id)) {
+                graph.addVertex(id);
+            }
+            final Map<String, Object> note = notes.get(id);
+            for (final String linkedNoteId : (Set<String>) note.get("linked-notes")) {
+                if (!graph.containsEdge(id, linkedNoteId)) {
+                    if (!graph.containsVertex(linkedNoteId)) {
+                        graph.addVertex(linkedNoteId);
+                    }
+                    graph.addEdge(id, linkedNoteId);
+                }
+            }
 
         }
 
