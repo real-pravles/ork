@@ -29,11 +29,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import static java.lang.String.format;
 import static java.util.Arrays.asList;
@@ -43,6 +40,8 @@ import static java.util.stream.Collectors.joining;
 @Slf4j
 public class ExportGraphToGraphviz implements com.pravles.processengine.api.ActivityFunction {
 
+    private static final double MIN_SIZE = 0.3;
+    private static final double MAX_SIZE = 2;
     public static final String NL = System.lineSeparator();
 
     @Override
@@ -68,11 +67,16 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
 
         final List<String> nodeIds = new ArrayList<>(notes.keySet());
         sort(nodeIds);
+        final Integer maxDegree = nodeIds
+                .stream()
+                .map(graph::degreeOf)
+                .max(Integer::compareTo)
+                .orElse(1);
+
         sb.append(
                 nodeIds.stream()
-                        .map(nodeId -> renderNode(nodeId, notes))
+                        .map(nodeId -> renderNode(nodeId, notes, maxDegree, graph))
                         .collect(joining()));
-
         sb.append(
                 graph.edgeSet().stream()
                         .map(edge -> renderEdge(edge))
@@ -94,9 +98,17 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
     }
 
     private String renderNode(final String nodeId,
-                              final Map<String, Map<String, Object>> notes) {
-        return format("  \"%s\" [label=\"%s\"]%s",
-                nodeId, nodeId, NL);
+                              final Map<String, Map<String, Object>> notes, Integer maxDegree, Graph<String, OrkEdge> graph) {
+
+        final int degree = graph.degreeOf(nodeId);
+
+        double size =
+                MIN_SIZE +
+                        (MAX_SIZE - MIN_SIZE)
+                                * Math.sqrt((double) degree / maxDegree);
+
+        return format("  \"%s\" [label=\"%s\", shape=ellipse, width=%.2f, height=%.2f]%s",
+                nodeId, nodeId, 1.0*size, 1.5+size, NL);
     }
 
     private static void writeToFile(String mainZkPath, StringBuilder sb) {
