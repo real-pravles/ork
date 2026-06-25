@@ -128,8 +128,8 @@ See
                                 "id", "81.a1b",
                                 "title", "Skeleton of a story of decision",
                                 "timestamp", "2026-06-22 19:57",
-                                "linked-notes", Arrays.asList("24",
-                                        "80"),
+                                "linked-notes", new HashSet(Arrays.asList("24",
+                                        "80")),
                                 "train-of-thought", Arrays.asList("81", "81.a",
                                         "81.a1", "81.a1b")
                         )
@@ -147,7 +147,7 @@ See [[n80.1a][80.1a]]
                                 "id", "80.3",
                                 "title", "What is the decision about?",
                                 "timestamp", "2026-06-15 22:07",
-                                "linked-notes", Arrays.asList("80.1a"),
+                                "linked-notes", new HashSet(Arrays.asList("80.1a")),
                                 "train-of-thought", Arrays.asList("80", "80.3")
                         )
                 ),
