@@ -38,3 +38,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/src/test/resources/scenarios/01/actual/w300-0011.org
