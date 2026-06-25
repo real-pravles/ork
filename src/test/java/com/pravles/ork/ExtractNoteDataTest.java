@@ -55,11 +55,11 @@ class ExtractNoteDataTest {
                         How can we improve this whole story?
                         """,
                         Map.of(
-                                "id", "n1",
+                                "id", "1",
                                 "title", "",
                                 "timestamp", "2026-06-08 23:32",
                                 "linked-notes", Collections.emptyList(),
-                                "train-of-thought", Collections.emptyList()
+                                "train-of-thought", Arrays.asList("1")
                         )
                 ),
                 Arguments.of(
@@ -70,11 +70,11 @@ class ExtractNoteDataTest {
                         Can we use the material from the analog ZK?
                         """,
                         Map.of(
-                                "id", "n2",
+                                "id", "2",
                                 "title", "",
                                 "timestamp", "2026-06-12 15:03",
                                 "linked-notes", Collections.emptyList(),
-                                "train-of-thought", Collections.emptyList()
+                                "train-of-thought", Arrays.asList("2")
                         )
                 ),
                 Arguments.of(
