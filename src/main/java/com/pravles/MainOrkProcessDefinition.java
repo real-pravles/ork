@@ -21,6 +21,8 @@
 
 package com.pravles;
 
+import com.pravles.ork.CreateGraph;
+import com.pravles.ork.ExportGraphToGraphviz;
 import com.pravles.processengine.api.ActivityFunction;
 import com.pravles.processengine.api.ConditionFunction;
 import com.pravles.processengine.util.AbstractProcessDefinition;
@@ -49,6 +51,8 @@ public class MainOrkProcessDefinition extends AbstractProcessDefinition {
                                 .forEach(f ->
                                         fnBindings.put(f,
                                                 new ClojureActivityFunction(f)));
+        fnBindings.put("create-graph", new CreateGraph());
+        fnBindings.put("export-graph-to-graphviz", new ExportGraphToGraphviz());
     }
 
     @Override
