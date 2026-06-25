@@ -21,13 +21,28 @@
 
 package com.pravles.ork;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class ExtractNoteData implements Function<String, Map> {
+public class ExtractNoteData implements Function<String, Map<String, Object>> {
+
+    private static final Pattern ID_PATTERN =
+            Pattern.compile("<<n([^>]+)>>");
+
+    private static final Pattern HEADER_PATTERN =
+            Pattern.compile("^\\*\\*\\s+([^\\s]+)\\s+\\(([^)]+)\\)(?::\\s*(.*))?$",
+                    Pattern.MULTILINE);
+
+    private static final Pattern LINK_PATTERN =
+            Pattern.compile("\\[\\[n([A-Za-z0-9.]+)(?:\\]\\[[^\\]]+)?\\]\\]");
+
     @Override
-    public Map apply(final String input) {
+    public Map<String, Object> apply(final String input) {
         final String id = extractId(input);
 
         return Map.of(
@@ -39,23 +54,67 @@ public class ExtractNoteData implements Function<String, Map> {
         );
     }
 
-    private List<String> extractTrainOfThought(String id) {
-        return null;
+    private List<String> extractTrainOfThought(final String id) {
+        if (!id.matches("\\d+(?:\\.[A-Za-z0-9]+)*")) {
+            return Collections.emptyList();
+        }
+
+        final List<String> result = new ArrayList<>();
+
+        final String[] parts = id.split("\\.");
+
+        result.add(parts[0]);
+
+        String current = parts[0];
+        for (int i = 1; i < parts.length; i++) {
+            current = current + "." + parts[i];
+            result.add(current);
+        }
+
+        return result;
     }
 
-    private List<String> extractLinkedNotes(String input) {
-        return null;
+    private List<String> extractLinkedNotes(final String input) {
+        final Matcher matcher = LINK_PATTERN.matcher(input);
+
+        final List<String> result = new ArrayList<>();
+
+        while (matcher.find()) {
+            result.add(matcher.group(1));
+        }
+
+        return result;
     }
 
-    private String extractTimestamp(String input) {
-        return null;
+    private String extractTimestamp(final String input) {
+        final Matcher matcher = HEADER_PATTERN.matcher(input);
+
+        if (!matcher.find()) {
+            throw new IllegalArgumentException("Cannot extract timestamp");
+        }
+
+        return matcher.group(2);
     }
 
-    private String extractTitle(String input) {
-        return null;
+    private String extractTitle(final String input) {
+        final Matcher matcher = HEADER_PATTERN.matcher(input);
+
+        if (!matcher.find()) {
+            throw new IllegalArgumentException("Cannot extract title");
+        }
+
+        final String title = matcher.group(3);
+
+        return title == null ? "" : title;
     }
 
-    private String extractId(String input) {
-        return null;
+    private String extractId(final String input) {
+        final Matcher matcher = ID_PATTERN.matcher(input);
+
+        if (!matcher.find()) {
+            throw new IllegalArgumentException("Cannot extract id");
+        }
+
+        return matcher.group(1);
     }
 }
