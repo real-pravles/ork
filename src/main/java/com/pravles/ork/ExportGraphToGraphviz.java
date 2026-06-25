@@ -108,7 +108,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
                                 * Math.sqrt((double) degree / maxDegree);
 
         return format("  \"%s\" [label=\"%s\", shape=ellipse, width=%.2f, height=%.2f]%s",
-                nodeId, nodeId, 1.0*size, 1.5+size, NL);
+                nodeId, nodeId, 1.5*size, 1.0+size, NL);
     }
 
     private static void writeToFile(String mainZkPath, StringBuilder sb) {
