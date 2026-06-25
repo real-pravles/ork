@@ -129,7 +129,8 @@ See
                                 "timestamp", "2026-06-22 19:57",
                                 "linked-notes", Arrays.asList("24",
                                         "80"),
-                                "train-of-thought", Collections.emptyList()
+                                "train-of-thought", Arrays.asList("81", "81.a",
+                                        "81.a1", "81.a1b")
                         )
                 ),
                 Arguments.of(

@@ -55,20 +55,18 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
     }
 
     private List<String> extractTrainOfThought(final String id) {
-        if (!id.matches("\\d+(?:\\.[A-Za-z0-9]+)*")) {
-            return Collections.emptyList();
-        }
-
         final List<String> result = new ArrayList<>();
 
-        final String[] parts = id.split("\\.");
+        String current = id;
 
-        result.add(parts[0]);
-
-        String current = parts[0];
-        for (int i = 1; i < parts.length; i++) {
-            current = current + "." + parts[i];
+        while (!current.isEmpty()) {
             result.add(current);
+
+            current = current.substring(0, current.length() - 1);
+
+            if (current.endsWith(".")) {
+                current = current.substring(0, current.length() - 1);
+            }
         }
 
         return result;
