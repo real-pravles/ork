@@ -21,5 +21,41 @@
 
 package com.pravles.ork;
 
-public class ExtractNoteData {
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+
+public class ExtractNoteData implements Function<String, Map> {
+    @Override
+    public Map apply(final String input) {
+        final String id = extractId(input);
+
+        return Map.of(
+                "id", id,
+                "title", extractTitle(input),
+                "timestamp", extractTimestamp(input),
+                "linked-notes", extractLinkedNotes(input),
+                "train-of-thought", extractTrainOfThought(id)
+        );
+    }
+
+    private List<String> extractTrainOfThought(String id) {
+        return null;
+    }
+
+    private List<String> extractLinkedNotes(String input) {
+        return null;
+    }
+
+    private String extractTimestamp(String input) {
+        return null;
+    }
+
+    private String extractTitle(String input) {
+        return null;
+    }
+
+    private String extractId(String input) {
+        return null;
+    }
 }

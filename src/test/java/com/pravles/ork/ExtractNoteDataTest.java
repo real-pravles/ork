@@ -33,12 +33,13 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class ExtractNoteDataTest {
+    private static final ExtractNoteData sut = new ExtractNoteData();
 
     @ParameterizedTest
     @MethodSource("testCases")
     void shouldExtractNoteData(String input, Map<String, Object> expected) {
         // when
-        Map<String, Object> actual = ExtractNoteData.extract(input);
+        final Map<String, Object> actual = sut.apply(input);
 
         // then
         assertEquals(expected, actual);
