@@ -74,7 +74,7 @@ public class CreateGraph implements com.pravles.processengine.api.ActivityFuncti
 
                 while (i < trainOfThought.size()) {
                     final String source = trainOfThought.get(i-1);
-                    final String target = trainOfThought.get(i-1);
+                    final String target = trainOfThought.get(i);
 
                     if (!graph.containsEdge(source, target)) {
                         graph.addEdge(source, target);
