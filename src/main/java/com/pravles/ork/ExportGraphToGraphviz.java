@@ -29,7 +29,11 @@ import org.jgrapht.graph.DefaultEdge;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class ExportGraphToGraphviz implements com.pravles.processengine.api.ActivityFunction {
@@ -45,15 +49,30 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         final StringBuilder sb = new StringBuilder();
         sb.append("graph G {");
         sb.append(NL);
+
+        final List<String> nodeIds = new ArrayList<>(notes.keySet());
+        Collections.sort(nodeIds);
+
+        sb.append(
+                nodeIds.stream()
+                        .map(nodeId -> renderNode(nodeId, notes))
+                        .collect(Collectors.joining())
+
+        );
+
         sb.append("}");
         sb.append(NL);
 
 
 
-        // TODO: Determine file name
         writeToFile(mainZkPath, sb);
 
         return ctx;
+    }
+
+    private String renderNode(final String nodeId, final Map<String, Map<String, Object>> notes) {
+        return String.format("\"%s\" [label=\"%s\"]%s",
+                nodeId, nodeId, NL);
     }
 
     private static void writeToFile(String mainZkPath, StringBuilder sb) {
