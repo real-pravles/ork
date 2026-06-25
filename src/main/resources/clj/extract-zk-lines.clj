@@ -36,10 +36,16 @@
 
 (def nl (System/getProperty "line.separator"))
 
-
 (defn гав
   [ctx]
-  (let [main-zk-path (get ctx "main-zk-path")]
+  (let [main-zk-path (get ctx "main-zk-path")
+        content      (slurp main-zk-path)
+        lines        (str/split-lines content)
+        zk-lines     (->> lines
+                          (drop-while #(not= "<<zk>>" %))
+                          rest
+                          (str/join nl))]
     (println "extract-zk-lines")
-    (println "main-zk-path: " main-zk-path)
+    (println "main-zk-path:" main-zk-path)
+    (.put ctx "zk-lines" zk-lines)
     ctx))
