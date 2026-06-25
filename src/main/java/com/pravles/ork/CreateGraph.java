@@ -26,12 +26,25 @@ import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.DirectedAcyclicGraph;
 import org.jgrapht.graph.Pseudograph;
 
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class CreateGraph implements com.pravles.processengine.api.ActivityFunction {
+    private final static ExtractNoteData extractNodeData = new ExtractNoteData();
+
     @Override
     public Map<String, Object> apply(Map<String, Object> ctx) {
+        final List<String> noteTxts = (List<String>) ctx.get("note-txts");
 
+        final Map<String, Map<String, Object>> notes =
+                noteTxts
+                        .stream()
+                        .map(txt -> extractNodeData.apply(txt))
+                        .collect(Collectors.toMap(
+                                m -> (String) m.get("id"),
+                                m -> m
+                        ));
 
         final Graph<String, DefaultEdge> graph =
                 new Pseudograph<>(DefaultEdge.class);
