@@ -22,7 +22,6 @@
 package com.pravles.ork;
 
 import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.DirectedAcyclicGraph;
 import org.jgrapht.graph.Pseudograph;
 
@@ -49,8 +48,8 @@ public class CreateGraph implements com.pravles.processengine.api.ActivityFuncti
                                 m -> m
                         ));
 
-        final Graph<String, DefaultEdge> graph =
-                new Pseudograph<>(DefaultEdge.class);
+        final Graph<String, OrkEdge> graph =
+                new Pseudograph<>(OrkEdge.class);
 
         final List<String> noteIds = new ArrayList<>(notes.keySet());
         Collections.sort(noteIds);

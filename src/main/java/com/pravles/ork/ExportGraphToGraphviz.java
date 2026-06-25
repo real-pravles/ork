@@ -24,7 +24,6 @@ package com.pravles.ork;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.jgrapht.Graph;
-import org.jgrapht.graph.DefaultEdge;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,7 +41,7 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
 
     @Override
     public Map<String, Object> apply(Map<String, Object> ctx) {
-        final Graph<String, DefaultEdge> graph = (Graph<String, DefaultEdge>) ctx.get("graph");
+        final Graph<String, OrkEdge> graph = (Graph<String, OrkEdge>) ctx.get("graph");
         final Map<String, Map<String, Object>> notes = (Map<String, Map<String, Object>>) ctx.get("notes");
         final String mainZkPath = (String) ctx.get("main-zk-path");
 
@@ -78,8 +77,11 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         return ctx;
     }
 
-    private String renderEdge(final DefaultEdge edge) {
-        return "";
+    private String renderEdge(final OrkEdge edge) {
+        return String.format("  \"%s\" -- \"%s\"%s",
+                edge.getSource(),
+                edge.getTarget(),
+                NL);
     }
 
     private String renderNode(final String nodeId, final Map<String, Map<String, Object>> notes) {
