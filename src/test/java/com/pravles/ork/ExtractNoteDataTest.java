@@ -25,6 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -58,7 +59,7 @@ class ExtractNoteDataTest {
                                 "id", "1",
                                 "title", "",
                                 "timestamp", "2026-06-08 23:32",
-                                "linked-notes", Collections.emptyList(),
+                                "linked-notes", Collections.emptySet(),
                                 "train-of-thought", Arrays.asList("1")
                         )
                 ),
@@ -73,7 +74,7 @@ class ExtractNoteDataTest {
                                 "id", "2",
                                 "title", "",
                                 "timestamp", "2026-06-12 15:03",
-                                "linked-notes", Collections.emptyList(),
+                                "linked-notes", Collections.emptySet(),
                                 "train-of-thought", Arrays.asList("2")
                         )
                 ),
@@ -98,8 +99,8 @@ Related notes:
                                 "id", "3",
                                 "title", "",
                                 "timestamp", "2026-06-13 10:49",
-                                "linked-notes", Arrays.asList("4", "5",
-                                        "11", "9", "14", "15", "22"),
+                                "linked-notes", new HashSet(Arrays.asList("4", "5",
+                                        "11", "9", "14", "15", "22")),
                                 "train-of-thought", Collections.singletonList("3")
                         )
                 ),
