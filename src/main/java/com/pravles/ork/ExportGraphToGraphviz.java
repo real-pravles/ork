@@ -60,6 +60,14 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
 
         );
 
+        sb.append(
+                graph.edgeSet().stream()
+                        .map(edge -> renderEdge(edge))
+
+                        .collect(Collectors.joining())
+
+        );
+
         sb.append("}");
         sb.append(NL);
 
@@ -68,6 +76,10 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
         writeToFile(mainZkPath, sb);
 
         return ctx;
+    }
+
+    private String renderEdge(final DefaultEdge edge) {
+        return "";
     }
 
     private String renderNode(final String nodeId, final Map<String, Map<String, Object>> notes) {
