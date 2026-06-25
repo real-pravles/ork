@@ -36,6 +36,8 @@ public class ExportGraphToGraphviz implements com.pravles.processengine.api.Acti
 
         // TODO: Determine file name
         final File mainZkFile = new File(mainZkPath);
+        final File parent = mainZkFile.getParentFile();
+        final String mainZkName = mainZkFile.getName();
 
         return ctx;
     }
