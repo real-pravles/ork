@@ -80,7 +80,7 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
                 currentId.setLength(0);
                 currentId.append(addedId);
                 currentId.append(".");
-                curIdType = 'n';
+                curIdType = 'u';
             }
             else if (curIdType == 'u') {
                 currentId.append(curChar);
