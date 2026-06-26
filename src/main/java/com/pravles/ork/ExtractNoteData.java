@@ -34,6 +34,10 @@ import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static java.util.Collections.singletonList;
+import static java.util.Collections.sort;
+import static org.apache.commons.lang3.CharUtils.isAsciiNumeric;
+
 public class ExtractNoteData implements Function<String, Map<String, Object>> {
 
     private static final Pattern ID_PATTERN =
@@ -45,6 +49,9 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
 
     private static final Pattern LINK_PATTERN =
             Pattern.compile("\\[\\[n([A-Za-z0-9.]+)(?:\\]\\[[^\\]]+)?\\]\\]");
+    public static final char UNDEFINED = 'u';
+    public static final char NUMERIC = 'a';
+    public static final char ALPHABETIC = 'n';
 
     @Override
     public Map<String, Object> apply(final String input) {
@@ -61,18 +68,18 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
 
     private List<String> extractTrainOfThought(final String id) {
         if (!id.contains(".")) {
-            return Collections.singletonList(id);
+            return singletonList(id);
         }
 
         final List<String> result = new ArrayList<>();
 
-        StringBuilder currentId = new StringBuilder();
-        char curIdType = 'u'; // undefined
+        final StringBuilder currentId = new StringBuilder();
+        char curIdType = UNDEFINED;
 
         for (int i=0; i < id.length(); i++) {
             final char curChar = id.charAt(i);
-            final char curCharType = CharUtils.isAsciiNumeric(curChar) ? 'a' : 'n';
-            final boolean curCharNumeric = CharUtils.isAsciiNumeric(curChar);
+            final char curCharType = isAsciiNumeric(curChar) ?
+                    NUMERIC : ALPHABETIC;
 
             if ('.' == curChar) {
                 final String addedId = currentId.toString();
@@ -80,9 +87,9 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
                 currentId.setLength(0);
                 currentId.append(addedId);
                 currentId.append(".");
-                curIdType = 'u';
+                curIdType = UNDEFINED;
             }
-            else if (curIdType == 'u') {
+            else if (curIdType == UNDEFINED) {
                 currentId.append(curChar);
                 curIdType = curCharType;
             }
@@ -99,22 +106,7 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
         }
         result.add(currentId.toString());
 
-        /*
-
-        while (!current.isEmpty() && !dotFound) {
-            result.add(current);
-
-            current = current.substring(0, current.length() - 1);
-
-            if (current.endsWith(".")) {
-                result.add(current.substring(0, current.length() - 1));
-                dotFound = true;
-            }
-        }
-
-         */
-
-        Collections.sort(result);
+        sort(result);
 
         return result;
     }
