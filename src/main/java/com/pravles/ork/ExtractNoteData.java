@@ -21,6 +21,9 @@
 
 package com.pravles.ork;
 
+import org.apache.commons.lang3.CharUtils;
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -63,8 +66,30 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
 
         final List<String> result = new ArrayList<>();
 
-        String current = id;
+        StringBuilder currentId = new StringBuilder();
+        boolean curIdNumeric = StringUtils.isNumeric(id);
+
         boolean dotFound = false;
+
+        for (int i=0; i < id.length(); i++) {
+            final char curChar = id.charAt(i);
+            final boolean curCharNumeric = CharUtils.isAsciiNumeric(curChar);
+
+            if (".".equals(curChar)) {
+                result.add(currentId.toString());
+                currentId.setLength(0);
+            } else if (curIdNumeric == curCharNumeric) {
+                currentId.append(curChar);
+                curIdNumeric = curCharNumeric;
+            } else {
+                result.add(currentId.toString());
+                currentId.setLength(0);
+                currentId.append(curChar);
+                curIdNumeric = curCharNumeric;
+            }
+        }
+
+        /*
 
         while (!current.isEmpty() && !dotFound) {
             result.add(current);
@@ -76,6 +101,8 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
                 dotFound = true;
             }
         }
+
+         */
 
         Collections.sort(result);
 
