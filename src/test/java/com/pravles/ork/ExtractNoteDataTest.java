@@ -182,7 +182,37 @@ See
                                 "linked-notes", new HashSet<String>(Arrays.asList("40", "72.a")),
                                 "train-of-thought", Arrays.asList("44")
                         )
+                ),
+
+                Arguments.of(
+                        """
+** 92.aaa123b (2026-06-13 12:48): Note IDs with multiple digits and letters
+<<n92.aaa123b>>
+
+We want to test correct thought of train extraction here.
+                        """,
+                        Map.of(
+                                "id", "92.aaa123b",
+                                "title", "Note IDs with multiple digits and letters",
+                                "timestamp", "2026-06-13 12:48",
+                                "linked-notes", Collections.emptySet(),
+                                "train-of-thought", Arrays.asList("92",
+                                        "92.aaa",
+                                        "92.aaa123",
+                                        "92.aaa123b")
+                        )
                 )
+
+
+
+
+
+
+
+
+
+
+
 
         );
     }
