@@ -67,10 +67,7 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
         final List<String> result = new ArrayList<>();
 
         StringBuilder currentId = new StringBuilder();
-        String lastId = null;
-        boolean curIdNumeric = StringUtils.isNumeric(id);
-
-        boolean dotFound = false;
+        boolean curIdNumeric = true;
 
         for (int i=0; i < id.length(); i++) {
             final char curChar = id.charAt(i);
@@ -94,6 +91,7 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
                 curIdNumeric = curCharNumeric;
             }
         }
+        result.add(currentId.toString());
 
         /*
 
