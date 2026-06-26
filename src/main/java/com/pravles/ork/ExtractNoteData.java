@@ -67,6 +67,7 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
         final List<String> result = new ArrayList<>();
 
         StringBuilder currentId = new StringBuilder();
+        String lastId = null;
         boolean curIdNumeric = StringUtils.isNumeric(id);
 
         boolean dotFound = false;
@@ -76,14 +77,19 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
             final boolean curCharNumeric = CharUtils.isAsciiNumeric(curChar);
 
             if (".".equals(curChar)) {
-                result.add(currentId.toString());
+                final String addedId = currentId.toString();
+                result.add(addedId);
                 currentId.setLength(0);
+                currentId.append(addedId);
+                currentId.append(".");
             } else if (curIdNumeric == curCharNumeric) {
                 currentId.append(curChar);
                 curIdNumeric = curCharNumeric;
             } else {
-                result.add(currentId.toString());
+                final String addedId = currentId.toString();
+                result.add(addedId);
                 currentId.setLength(0);
+                currentId.append(addedId);
                 currentId.append(curChar);
                 curIdNumeric = curCharNumeric;
             }
