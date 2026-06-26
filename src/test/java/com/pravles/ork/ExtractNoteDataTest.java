@@ -47,7 +47,7 @@ class ExtractNoteDataTest {
     }
 
     static Stream<Arguments> testCases() {
-        return Stream.of(/*
+        return Stream.of(
                 Arguments.of(
                         """
                         ** 1 (2026-06-08 23:32)
@@ -183,7 +183,6 @@ See
                                 "train-of-thought", Arrays.asList("44")
                         )
                 ),
-*/
                 Arguments.of(
                         """
 ** 92.aaa123b (2026-06-13 12:48): Note IDs with multiple digits and letters

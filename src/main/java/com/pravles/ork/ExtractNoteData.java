@@ -79,6 +79,7 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
                 currentId.setLength(0);
                 currentId.append(addedId);
                 currentId.append(".");
+                curIdNumeric = false;
             } else if (curIdNumeric == curCharNumeric) {
                 currentId.append(curChar);
                 curIdNumeric = curCharNumeric;
