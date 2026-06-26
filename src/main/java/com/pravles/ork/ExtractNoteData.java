@@ -73,7 +73,7 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
             final char curChar = id.charAt(i);
             final boolean curCharNumeric = CharUtils.isAsciiNumeric(curChar);
 
-            if (".".equals(curChar)) {
+            if ('.' == curChar) {
                 final String addedId = currentId.toString();
                 result.add(addedId);
                 currentId.setLength(0);
