@@ -67,10 +67,11 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
         final List<String> result = new ArrayList<>();
 
         StringBuilder currentId = new StringBuilder();
-        boolean curIdNumeric = true;
+        char curIdType = 'u'; // undefined
 
         for (int i=0; i < id.length(); i++) {
             final char curChar = id.charAt(i);
+            final char curCharType = CharUtils.isAsciiNumeric(curChar) ? 'a' : 'n';
             final boolean curCharNumeric = CharUtils.isAsciiNumeric(curChar);
 
             if ('.' == curChar) {
@@ -79,17 +80,21 @@ public class ExtractNoteData implements Function<String, Map<String, Object>> {
                 currentId.setLength(0);
                 currentId.append(addedId);
                 currentId.append(".");
-                curIdNumeric = false;
-            } else if (curIdNumeric == curCharNumeric) {
+                curIdType = 'n';
+            }
+            else if (curIdType == 'u') {
                 currentId.append(curChar);
-                curIdNumeric = curCharNumeric;
+                curIdType = curCharType;
+            }
+            else if (curIdType == curCharType) {
+                currentId.append(curChar);
             } else {
                 final String addedId = currentId.toString();
                 result.add(addedId);
                 currentId.setLength(0);
                 currentId.append(addedId);
                 currentId.append(curChar);
-                curIdNumeric = curCharNumeric;
+                curIdType = curCharType;
             }
         }
         result.add(currentId.toString());
